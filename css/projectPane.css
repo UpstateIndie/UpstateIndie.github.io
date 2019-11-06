@@ -1,0 +1,95 @@
+
+/* Declare the default 'homepane' class. */
+.proj-area {
+	padding-top: 125px;
+	transition: padding-top 0.5s; /* Animation time */
+	-webkit-transition: padding-top 0.5s; /* For Safari */
+	-moz-transition: padding-top 0.5s;
+}
+
+.projpane {
+	height: 400px;
+	width: 65%;
+	margin: 5px 1% 5px 1%;
+	background-image: url("/img/day-bg.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: solid 1px #bdbdbd;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);	
+}
+
+/* Configure bg image defaults. */
+.projpane img
+{
+	width: 100%;
+	max-height: 100%;
+	margin:auto;
+	display: block;
+}
+
+.projpane h3
+{	
+	color: transparent;
+	/* margin: 1% 1% 1% 1%; */
+	margin: 5 5 10px;
+	text-transform: uppercase;
+	font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-weight: 700;
+	letter-spacing: 1px;
+	text-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+	-webkit-font-smoothing: antialiased ;
+	-osx-font-smoothing: grayscale;
+	float: left;
+	transition: color 0.5s; /* Animation time */
+	-webkit-transition: color 0.5s; /* For Safari */
+	-moz-transition: color 0.5s;
+	transition-delay: 0.5s;
+	-webkit-transition-delay: 0.5s;
+	-moz-transition-delay: 0.5s;
+}
+
+/* Initialize inner div defaults. */
+.projpane > .upper {
+	height: 50px;
+	width: 65%;
+	margin-top: 2%;
+	margin-right: 1%;
+	margin-bottom: 5px;
+	margin-left: 2%;
+	float: left;  
+	background-color: transparent; /*#274257;*/
+	transition: height 0.5s, margin-top 0.5s, margin-left 0.5s; /* Animation time */
+	-webkit-transition: height 0.5s, margin-top 0.5s, margin-left 0.5s; /*, background-color 0.5s; /* For Safari */
+	-moz-transition: height 0.5s, margin-top 0.5s, margin-left 0.5s; /*, background-color 0.5s; */
+	transition-delay: 0.5s;
+	-webkit-transition-delay: 0.5s;
+	-moz-transition-delay: 0.5s;
+}
+
+.proj-area.in-view {
+	padding-top: 100px;
+}
+
+/* On view, display any transitions. */
+.projpane.in-view .upper{
+	height: 60px; /* The height on view. */
+	margin-top: 3%; /* The top margin on view.*/
+	margin-left: 4%; 
+}
+
+.projpane.in-view h3 {
+	color: #fff;
+}
+
+.proja {
+    color: #fff;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: #fff;
+    }
+}

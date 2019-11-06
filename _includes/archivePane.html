@@ -1,0 +1,32 @@
+<!-- archivePane Start -->
+
+<center>
+<div class="area cf">
+
+{% assign post = site.posts.first %}
+
+	<div class="pane bounce-up cf">
+	<div class="subject blog">
+	<div class="cat-color"></div>
+		<div class="icon"><i class="fa fa-pencil"></i></div>
+		<div class="header cf"><br></div>
+
+		<!--h3 class="title">Blog</h3-->
+		
+		<div class="content">
+			
+		        {{ page.content | markdownify }}
+		
+		        <div>
+		          {% for post in paginator.posts %}
+		            {% include post-list.html%}
+		          {% endfor %}
+		        </div>
+
+        		{% include pagination.html %}
+        
+		</div>
+	</div>
+	</div>
+</div>
+</center>

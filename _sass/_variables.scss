@@ -1,0 +1,17 @@
+// Variables
+$black: #000;
+$white: #fff;
+$lightGrey: #bdbdbd;
+
+$primary: rgba($black, 0.87); 
+$secondary: rgba($black, 0.54);
+$backdrop: #e0e0e0;
+$greyPane: #f5f5f5;
+$link-color: #1976d2;
+$divide-color: rgba($black, 0.12);
+
+$navbar-text-shadow: true; 
+$header-text-shadow: true; 
+$intro-text-color: $white; // deprecated dynamic typed text 
+
+$social-buttons-color: lighten($link-color,20%); 

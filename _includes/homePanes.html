@@ -1,0 +1,57 @@
+
+<center>
+	<div class="proj-area">
+		<a class="proja" href="/projects/">
+		<div class="projpane cf">
+			<div class="upper">
+				
+				<h3>Featured Project</h3>
+				
+			</div>
+		</div>
+		</a>
+	</div>
+
+	<!-- Pane 2 -->
+	  
+	{% assign post = site.posts.first %}
+	
+<div class="area cf">
+		  
+	<div class="pane bounce-up cf">
+		
+		<div class="subject default">
+			<div class="cat-color"></div>
+			<div class="icon"><i class="fa fa-pencil"></i></div>
+			<div class="header cf">
+				<h4 class="date"><i class="fa fa-calendar-o"></i> 
+					<strong>
+						{{ post.date | date_to_string }} 
+					</strong>
+				</h4>
+				<h4 class="cat">
+					<i class="fa fa-folder-o"></i>
+    					<a class ="label" href="{{site.baseurl}}/categories/{{ post.category | downcase }}.html">
+    					{{ post.category }}
+    					</a>
+				</h4>	
+			</div>			
+			<center><h3 class="title">Latest Blog Post</h3></center>
+			<div class="content">
+				<br>
+				<h4>
+					<strong> <a href="{{site.baseurl}}{{ post.url }}">{{post.title}} </a> </strong>
+				</h4>
+
+				{{ post.content | strip_html | markdownify | truncatewords: site.post-preview-words }}
+				
+				{% if post.category != "announcements" %}
+				<h4><small><center>
+					<a href="{{site.baseurl}}{{post.url}}#disqus_thread">Comments</a>
+				</center></small></h4>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+</div>	
+</center>

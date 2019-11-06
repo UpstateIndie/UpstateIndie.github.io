@@ -1,0 +1,125 @@
+
+# Site settings
+
+# Site url.
+url: "https://UpstateIndie.github.io/UpstateIndie"
+
+# Use if hosting at Github Pages.
+baseurl: ""
+
+# Google tracking id.
+google-tracking-id: ""
+
+# Forces https everywhere in the site. 
+force-https: True
+
+#############
+# HTML Head #
+#############
+lang: "en"
+author: "Jesse Allen"
+title: "Upstate Indie"
+description: "Blog and Website of Upstate Indie. Blogging about game development experiences and tech."
+keywords: "upstate, indie, games, pcgames, dev, jesse, allen, devblog, tech, torque3d"
+favicon: "/img/favicon.ico"
+
+################
+# Header layout #
+################
+black-favicon: "/img/favicon.ico"
+background-img: "../img/day-bg.png"
+
+##############################
+# Intro table cell image     #
+##############################
+me-img: "/img/wowLogo.png"
+
+##############################
+# Color the browser elements #
+##############################
+color-browser: "#000000"
+apple-status-bar-style: "black"
+
+################
+# Web app mode #
+################
+web-app-mode: True
+
+# Icons for Web App mode
+icon-36p: "/img/web-app/wowLogo-36p.png"
+icon-48p: "/img/web-app/wowLogo-48p.png"
+icon-72p: "/img/web-app/wowLogo-72p.png"
+icon-96p: "/img/web-app/wowLogo-96p.png"
+icon-144p: "/img/web-app/wowLogo-144p.png"
+icon-192p: "/img/web-app/wowLogo-192p.png"
+
+########
+# Blog #
+########
+post-preview-words: 27
+
+paginate: 5
+
+email-share: False
+fb-share: False
+twitter-share: False
+linkedin-share: False
+reddit-share: False
+google-plus-share: False
+tumblr-share: False
+pinterest-share: False
+pocket-share: False
+vkontakte-share: False
+
+disqus-shortname: "upstateindie"
+
+syntax-highlight: True
+
+###########
+# Contact #
+###########
+email: "contact@upstateindie.com"
+
+##################
+# Social Buttons #
+##################
+social:
+  - title: "facebook"
+    url: "https://www.facebook.com/upstateindie/?fref=ts"
+  - title: "twitter"
+    url: "https://twitter.com/upstateindie/"
+  #- title: "github"
+  #  url: "https://github.com/UpstateIndie/"
+  #- title: "bitcoin"
+  #  url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
+  #- title: "rss"
+  #  url: "/feed.xml"
+
+############
+# 404 page #
+############
+404-img: "/img/labtocat.png"
+
+################################################################################
+# NB! Tread carefully if you want to change the variables below this point!
+
+# Sections shown in the index page
+pages_list:
+  Projects: 'projects'
+  Blog: 'blog'
+  About: 'about'
+  Contact: 'contact'
+
+# Exclusion list from the generated _site
+exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts"]
+
+# Pagination path
+paginate_path: "blog/page:num/"
+
+# Enable minification SASS
+sass:
+  style: compressed
+
+gems:
+  - jekyll-paginate
+  - jemoji
