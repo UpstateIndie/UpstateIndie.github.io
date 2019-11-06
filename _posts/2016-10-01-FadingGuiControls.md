@@ -48,7 +48,7 @@ I originally updated this resource to work with Torque around the version 3.5-is
 <h2>Downloads</h2>
 The Fading Gui Controls on GitHub:<br>
 <br>
-[Fading Gui Controls](https://github.com/UpstateIndie/Resources/tree/Fading-Gui-Controls)
+[Fading Gui Controls](https://github.com/UpstateIndie/Resources/tree/FadingGuiControls)
 <br>
 <br>
 <h2>Installation</h2>
