@@ -47,7 +47,6 @@ In Part I we are adding the TPose(root/idle) and basic character movement to our
 Pick a character for your project. I grabbed up Ybot to use while making this tutorial, but the value here is that you don't have to. Pick any character you want and let's go!
 <br><br>
 When you click the download link you'll be presented with a popup with 2 options:<br>
-<img src="">
 <p align="center">
   <img width="699" height="207" src="{{site.baseurl}}/img/tposeDownload.png">
 </p>
