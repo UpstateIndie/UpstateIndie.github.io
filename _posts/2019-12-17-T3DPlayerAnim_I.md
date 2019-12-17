@@ -1,13 +1,11 @@
 ---
 layout: post
 section-type: post
-title: Torque3D Player Animation
+title: Torque3D Player Animation I
 category: tutorials
 tags: [ 'tutorials' ]
 ---
 
-<h2>Part I</h2>
-<br>
 <h3>DISCLAIMER</h3>
 <i>I am not responsible for anything you mess up with your project as a result of following this.
 <br><br>
