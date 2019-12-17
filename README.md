@@ -22,3 +22,5 @@ Core design based off of [{ Personal } Jekyll theme](https://github.com/PanosSak
 Syntax highlighting uses the [highlight.js](https://highlightjs.org) library. highlight.js is Copyright &copy; 2006 Ivan Sagalaev. Custom highlighting(cpp language extensions) for Torque by Jesse Allen.
 
 Upstate Indie Website and Blog design Copyright &copy; 2016-2019 Jesse Allen
+Upstate Indie Copyright &copy; 2019 Upstate Indie, LLC
+The contents of UpstateIndie.com is the intellectual property of Upstate Indie, LLC unless explicity specified otherwise.
