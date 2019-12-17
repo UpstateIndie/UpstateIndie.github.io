@@ -32,9 +32,9 @@ The goal here is to introduce newcomers to the engine, so I want to keep this cl
 <b>What You're Gonna Need:</b>
 Torque3D MIT 3.10.1 BINARY: <a href="http://wiki.torque3d.org/main:downloads" target="_blank">Torque3D Binaries</a>
 <br><br>
-A Mixamo account at <a href="www.mixamo.com" target="_blank">mixamo</a>. No I don't work for Mixamo, they just offer something amazing for us to leverage here.
+A Mixamo account at <a href="https://www.mixamo.com/#/" target="_blank">mixamo</a>. No I don't work for Mixamo, they just offer something amazing for us to leverage here.
 <br><br>
 A text editor. I personally use <a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a> but there's a strong case for using Torsion.
 <br><br>
-That's it! In the future we may use <a href="https://www.blender.org/">Blender</a> briefly for simple collision shapes but aside from that this is showing off the power of Torque, not Blender. I could forego using Blender at all because Torque can do anything we need it to anyway!
+That's it! In the future we may use <a href="https://www.blender.org/" target="_blank">Blender</a> briefly for simple collision shapes but aside from that this is showing off the power of Torque, not Blender. I could forego using Blender at all because Torque can do anything we need it to anyway!
 <br><br>
