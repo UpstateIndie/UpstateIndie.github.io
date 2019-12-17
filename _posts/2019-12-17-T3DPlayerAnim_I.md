@@ -71,8 +71,7 @@ For each animation we download, a popup will appear when we click the Download b
 <br><br>
 <i>The above options will be the same for every animation we download. If you leave the browser up while you are downloading these, every time you pick a new animation to download it will remember the settings you had(so you don't have to keep updating your selections).</i>
 <br><br>
-<b>STEP 1-B: Movement Animations</b>
-<br><br>
+<h3>STEP 1-B: Movement Animations</h3>
 We need an animation for each action the Player is going to perform. Right now, specifically, we are going to choose the animations for the actions I've listed below.
 <br><br>
 <b>Root:</b> Type Idle in the search bar and pick an animation to download.
@@ -91,19 +90,23 @@ We need an animation for each action the Player is going to perform. Right now, 
 <br><br>
 <i>Here are a few things to think about for the future, when you are doing this on your own. Any of these animations can be played backwards. This means it is entirely possible to use a Walking animation from mixamo to be your Run and Back animation. Also a Strafe animation can be used for both Side and Side_Right if played backwards. And so on. We'll go over this more in Step 2-B below.
 </i><br><br>
-<b>STEP 2-A: Importing T-Pose</b>
+<h3>STEP 2-A: Importing T-Pose</h3>
 Okay, so that's enough animations to get us through this first tutorial and get our Player moving about. Now we're into the good stuff, getting this all working in Torque! For this tutorial, do NOT import/export these models through Blender or another modeling app. Remember, we're not going to do that here - the import/export process there is more advanced and is reserved for a future tutorial, if at all in this series. Steve has some information <a href="https://forums.torque3d.org/viewtopic.php?t=1680" target="_blank">here</a> about the latest version of Blender for those who are curious. He gives some pointers there but personally I have an older version of Blender that works fine for me and hadn't attempted to import/export using this newer version of Blender.
 <br><br>
 Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am about to make this all look easy because it should be clear that it IS easy...the TSShapeConstructor is your best friend and is extremely powerful. Much of its functionality is beyond the scope of this tutorial, but we will be using it more as we progress through the series. I strongly encourage newcomers to Torque to get familiar with this class later on so that they might realize the potential around using it. <a href="https://torque-3d.readthedocs.io/en/latest/script/class/TSShapeConstructor.html" target="_blank">TSShapeConstructor Reference</a>
 <br><br>
 <i>So what is this and how is it used?</i> Well, when you import a model into Torque the TSShapeConstructor sort of takes over in the background without you really noticing. What is important here is you realize that anytime you import a model into Torque, the TSShapeConstructor is called and it will spit out a new file in the folder where your imported .DAE file is located. This is crucial, let's step through this process so that we can get a closer look:
 <br><br>
-1- Open up the art/shapes/actors/ folder. You'll see the original Soldier folder in there.
-2- Create a new folder inside named ybot(or whatever you call your model). Note that whatever you name this folder, you are going to need to remember very soon.
-3- Open up your newly created folder. You should now be at art/shapes/actors/ybot/(or whatever you call your model folder). Inside create one additional folder and name it Anims so you now have an art/shapes/actors/ybot/Anims/ directory.
-4- Extract all of the .zip animation files into the art/shapes/actors/ybot/Anims/ directory and the single ybot.zip file into the art/shapes/actors/ybot/ directory. This structure is going to be important in a minute when we use the script to hook all this into Torque.
-5-Open the file art/datablocks/player.cs and scroll down nearer the bottom to the Player datablock. The datablock holds information about our Player, and it starts off like this: 
-
+<b>1-</b> Open up the <filepath>art/shapes/actors/</filepath> folder. You'll see the original Soldier folder in there.
+<br><br>
+<b>2-</b> Create a new folder inside named <b>ybot</b>(or whatever you call your model). Note that whatever you name this folder, you are going to need to remember very soon.
+<br><br>
+<b>3-</b> Open up your newly created folder. You should now be at <filepath>art/shapes/actors/ybot/</filepath>(or whatever you call your model folder). Inside create one additional folder and name it Anims so you now have an <filepath>art/shapes/actors/ybot/Anims/</filepath> directory.
+<br><br>
+<b>4-</b> Extract all of the .zip animation files into the <filepath>art/shapes/actors/ybot/Anims/</filepath> directory and the single ybot.zip file into the <filepath>art/shapes/actors/ybot/</filepath> directory. This structure is going to be important in a bit when we use the script to hook all this into Torque.
+<br><br>
+<b>5-</b>Open the file <filepath>art/datablocks/player.cs</filepath> and scroll down nearer the bottom to the Player datablock. The datablock holds information about our Player, and it starts off like this: 
+<br><br>
 
 
 
