@@ -7,7 +7,7 @@
 url: "https://upstateindie.com"
 
 # Use if hosting at Github Pages.
-baseurl: "https://github.com/UpstateIndie/UpstateIndie.github.io/"
+baseurl: "https://github.com/UpstateIndie/UpstateIndie.github.io"
 
 # Google tracking id.
 google-tracking-id: ""
