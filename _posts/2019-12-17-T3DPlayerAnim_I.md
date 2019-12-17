@@ -29,7 +29,7 @@ In the future we may spruce things up a bit with a custom build in order to intr
 Hi everyone! I wanted to take some time out of the busy Holidays to give a little back to the Community. In this tutorial, we will be covering animation of new Players in Torque3D. Torque really does make it easy to start having fun with your game ideas! Here I will be sharing a workflow that I currently use to get Player objects up and running quickly and easily. While this tutorial is intended for beginners, the information covered here could be useful to others as well.
 The goal here is to introduce newcomers to the engine, so I want to keep this clear and concise. There is a lot of information to cover, but I'll do my best to present it all in an approachable order so it's easiest to follow. I'd like to reiterate that this is the first tutorial of a series that will become increasingly complex with each addition, so not all Player features will be availabe at the end of Part I. As we progress through each tutorial, additional functionality will be added to our Player. This is set up as a learn as you go process, so please join me as we explore the FUN side of Torque!
 <br><br>
-<b>What You're Gonna Need:<b>
+<b>What You're Gonna Need:</b>
 Torque3D MIT 3.10.1 BINARY: <a href="http://wiki.torque3d.org/main:downloads" target="_blank">Torque3D Binaries</a>
 <br><br>
 A Mixamo account at <a href="www.mixamo.com" target="_blank">mixamo</a>. No I don't work for Mixamo, they just offer something amazing for us to leverage here.
