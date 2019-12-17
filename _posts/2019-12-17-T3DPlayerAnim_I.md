@@ -50,7 +50,7 @@ When you click the download link you'll be presented with a popup with 2 options
 <p>
   <div align="center">
   <img src="https://github.com/UpstateIndie/UpstateIndie.github.io/blob/master/img/tposeDownload.PNG" height="207">
-  <div>
+  </div>
 </p>
 
 
