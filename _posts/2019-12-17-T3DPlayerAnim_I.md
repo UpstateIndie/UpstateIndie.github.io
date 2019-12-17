@@ -28,6 +28,7 @@ Hi everyone! I wanted to take some time out of the busy Holidays to give a littl
 The goal here is to introduce newcomers to the engine, so I want to keep this clear and concise. There is a lot of information to cover, but I'll do my best to present it all in an approachable order so it's easiest to follow. I'd like to reiterate that this is the first tutorial of a series that will become increasingly complex with each addition, so not all Player features will be availabe at the end of Part I. As we progress through each tutorial, additional functionality will be added to our Player. This is set up as a learn as you go process, so please join me as we explore the FUN side of Torque!
 <br><br>
 <b>What You're Gonna Need:</b>
+<br>
 Torque3D MIT 3.10.1 BINARY: <a href="http://wiki.torque3d.org/main:downloads" target="_blank">Torque3D Binaries</a>
 <br><br>
 A Mixamo account at <a href="https://www.mixamo.com/#/" target="_blank">mixamo</a>. No I don't work for Mixamo, they just offer something amazing for us to leverage here.
@@ -51,7 +52,18 @@ When you click the download link you'll be presented with a popup with 2 options
   <div align="center">
   <img src="/img/tposeDownload.PNG" height="207">
   </div>
-</p>
+</p><br>
+Here you want to choose <b>Collada(Dae)</b> and <b>T-Pose</b>. Just drop the .zip file in a handy place where you can find it to unzip it soon. A lot of times I'll just drop it right on the desktop.
+<br><br>
+While we're at the mixamo site we may as well grab up some animations. Click the <b>'Animations'</b> button at the top left. You'll notice in many cases there will be several different animations for a single type of movement(i.e. different kinds of Idle or Walking). We will be choosing one animation for each basic movement action. Here's what's important:
+<br><br>
+For each animation we download, a popup will appear when we click the Download button:<br>
+<p>
+  <div align="center">
+  <img src="/img/animDownload.PNG" height="207">
+  </div>
+</p><br>
+
 
 
 
