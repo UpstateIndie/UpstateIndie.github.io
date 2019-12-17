@@ -48,7 +48,7 @@ Pick a character for your project. I grabbed up Ybot to use while making this tu
 <br><br>
 When you click the download link you'll be presented with a popup with 2 options:<br>
 <p>
-<img src=" {{site.baseurl}}tposeDownload.PNG" height="207">
+<img src=" {{site.baseurl}}/img/tposeDownload.PNG" height="207">
 </p>
 
 
