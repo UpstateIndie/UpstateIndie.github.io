@@ -49,7 +49,7 @@ Pick a character for your project. I grabbed up Ybot to use while making this tu
 When you click the download link you'll be presented with a popup with 2 options:<br>
 <p>
   <div align="center">
-  <img src="https://github.com/UpstateIndie/UpstateIndie.github.io/blob/master/img/tposeDownload.PNG" height="207">
+  <img src="{{site.baseurl}}/img/tposeDownload.PNG" height="207">
   </div>
 </p>
 
