@@ -67,7 +67,7 @@ For each animation we download, a popup will appear when we click the Download b
 <br><br>
 <b>Skin:</b> Choose <b>Without Skin</b> here. This just means that each animation we download is going to contain only the bones and no model. Our model is in the T-Pose file we downloaded earlier.
 <br><br>
-<b>Frames per Second<b> and <b>Keyframe Reduction</b> are optional but I just usually leave them at the default settings. You can get really creative here if it's necessary!
+<b>Frames per Second</b> and <b>Keyframe Reduction</b> are optional but I just usually leave them at the default settings. You can get really creative here if it's necessary!
 <br><br>
 <i>The above options will be the same for every animation we download. If you leave the browser up while you are downloading these, every time you pick a new animation to download it will remember the settings you had(so you don't have to keep updating your selections).</i>
 <br><br>
