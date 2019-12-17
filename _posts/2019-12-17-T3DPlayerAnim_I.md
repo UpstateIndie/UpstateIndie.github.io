@@ -36,3 +36,18 @@ A text editor. I personally use <a href="https://notepad-plus-plus.org/" target=
 <br><br>
 That's it! In the future we may use <a href="https://www.blender.org/" target="_blank">Blender</a> briefly for simple collision shapes but aside from that this is showing off the power of Torque, not Blender. I could forego using Blender at all because Torque can do anything we need it to anyway!
 <br><br>
+<h2>PART I</h2>
+Let's address the elephant in the room. Mixamo. I could go on and on about the benefits of using this FREE service, but they have provided enough information on their site. Check out the <a href="https://helpx.adobe.com/creative-cloud/faq/mixamo-faq.html" target="_blank">FAQ</a> there and let it soak in that all of that truly is free for you to use. They have a huge and growing database of sleek characters and animations. This all probably sounds like a plug at this point so I'll stop, but by the time you are done with this tutorial I think you'll appreciate what they are putting on the table for us. Go ahead, get yourself an account there. I am going to have to insist that you have a bit of fun with that while looking at all the cool animations you are about to be using in Torque.
+<br><br>
+Done? Sweet. Moving along then, let's get this stuff into Torque!
+<br><br>
+In Part I we are adding the TPose(root/idle) and basic character movement to our Player. At the end of this tutorial, we'll have a mixamo character animated in Torque that is able to be expanded upon by any of the animations on the mixamo site. Don't worry! Footsteps, jumping, additional nodes, collision, and weapons  will all be covered as we progress through the series.
+<br><br>
+<h3>STEP 1-A: Intro to Mixamo</h3>
+Pick a character for your project. I grabbed up Ybot to use while making this tutorial, but the value here is that you don't have to. Pick any character you want and let's go!
+<br><br>
+When you click the download link you'll be presented with a popup with 2 options:<br>
+<img src=""></img>
+
+
+
