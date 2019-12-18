@@ -113,7 +113,7 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <b>firstPersonShadows = true;</b><br>
 <b>computeCRC = false;</b><br>
 <br>
-<filepath><b>// Third person shape</b></filepath><br>
+<filepath><b>&sol;&sol; Third person shape</b></filepath><br>
 <b>shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";</b><br>
 <b>...</b><br>
 <br>
