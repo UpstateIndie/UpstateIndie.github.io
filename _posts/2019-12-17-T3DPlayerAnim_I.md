@@ -109,9 +109,9 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br>
 <b>datablock PlayerData(DefaultPlayerData)<br>
 {<br>
-renderFirstPerson = false;<br>
-firstPersonShadows = true;<br>
-computeCRC = false;<br>
+&#09;renderFirstPerson = false;<br>
+&#09;firstPersonShadows = true;<br>
+&#09;computeCRC = false;<br>
 // Third person shape<br>
 shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";<br>
 ...<br>
@@ -121,9 +121,9 @@ shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";<br>
 <br><br>
 <b>datablock PlayerData(DefaultPlayerData)<br>
 {<br>
-renderFirstPerson = false;<br>
-firstPersonShadows = true;<br>
-computeCRC = false;<br>
+&#09;renderFirstPerson = false;<br>
+&#09;firstPersonShadows = true;<br>
+&#09;computeCRC = false;<br>
 <br>
 // Third person shape<br>
 //shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";<br>
@@ -137,13 +137,13 @@ Notice that I just commented out the original soldier_rigged.DAE line and added 
 <br><br>
 <b>function GameCore::spawnPlayer(%game, %client, %spawnPoint, %noControl)<br>
 {<br>
-...<br>
+&#09;...<br>
 }</b><br>
 <br>
 Within this function find where it says:
 <br><br>
-<b>// Give the client control of the player
-%client.player = %player;</b><br>
+<b>&#09;// Give the client control of the player
+&#09;%client.player = %player;</b><br>
 <br>
 Right below that line add this line:<br>
 <br>
@@ -153,12 +153,12 @@ Right below that line add this line:<br>
 <br>
 <b>function GameCore::preparePlayer(%game, %client)<br>
 {
-...<br>
+&#09;...<br>
 }</b><br>
 <br>
 Find the line <b>%game.loadOut(%client.player)</b> inside that function and comment it out. Remember, commenting is just adding <b>//</b> in front of that line:<br>
 <br>
-<b>//%game.loadOut(%client.player)</b><br>
+<b>&#09;//%game.loadOut(%client.player)</b><br>
 <br>
 Now the Player won't try to equip weapons without the proper nodes in place.
 <br><br>
