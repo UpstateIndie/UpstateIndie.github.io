@@ -19,7 +19,7 @@ This is the first part in a series. Don't get the fire and pitchforks out until 
 <br><br>
 A base understanding of downloading the engine and installing it is a prerequisite to this.
 <br><br>
-This tutorial is intended to be performed using the current release of Torque3D MIT(3.10.1) in its binary form. Version 4.0 is fast on the horizon, introducing a myriad of new features and additions, but we are going to keep it old school here and introduce those things as they are released. By binary I mean don't download and build Torque just grab the precompiled .exe from [here]. I recommend a brand new download and we're just gonna take off right away with that. We're not worrying about customization, we are getting our Players running around and animated FAST.
+This tutorial is intended to be performed using the current release of Torque3D MIT(3.10.1) in its binary form. Version 4.0 is fast on the horizon, introducing a myriad of new features and additions, but we are going to keep it old school here and introduce those things as they are released. By binary I mean don't download and build Torque just grab the precompiled .exe(link below). I recommend a brand new download and we're just gonna take off right away with that. We're not worrying about customization, we are getting our Players running around and animated FAST.
 <br><br>
 In the future we may spruce things up a bit with a custom build in order to introduce new features but for now we are going to start from the ground up. We are not even going to have to use any sort of modeling software or animate our own models! By the end of this tutorial series we will have a vast library of animations at our disposal and the knowledge to use them in Torque3D MIT.
 </i><br><br>
