@@ -255,7 +255,7 @@ function YbotDAE::onLoad(%this)<br>
    %this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_backward", "0", "-1", "1", "0");<br>
    %this.addSequence("./anims/PlayerAnim_Side.dae", "Side", "0", "-1", "1", "0");<br>
    %this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0");<br>
-}<br>
+}</b><br>
 <br>
 (TODO-Here we need to talk about changing the filenames of the animations)<br>
 Save the script file and now when we launch Torque and start up a level we have an animated character playing its <b>Root</b> animation:
