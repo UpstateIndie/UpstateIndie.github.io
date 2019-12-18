@@ -282,7 +282,7 @@ Let's recap. Now since this is a tutorial I went ahead and stepped you through a
 <b>3-</b> Write a script that leverages the power of Torque's TSShapeConstructor to add your animations to the shape.
 <br><br>
 
-And there you have it! You are now free to integrate any mixamo characters or animations into your projects in 3 easy steps. All without ever having to touch a modeling app. In the following tutorial we will be breaking down those movement states a bit, looking closer at the <b>TSShapeConstructor<b> commands and how they work.
+And there you have it! You are now free to integrate any mixamo characters or animations into your projects in 3 easy steps. All without ever having to touch a modeling app. In the following tutorial we will be breaking down those movement states a bit, looking closer at the <b>TSShapeConstructor</b> commands and how they work.
 <br><br>
 I hope you enjoyed this learning process as much as I did creating this tutorial. The main take away here is that you don't let Torque boggle your mind. Torque can be a bit daunting at first but once you learn the ropes it's as easy as <b>1, 2, 3</b>! 
 <br><br>
