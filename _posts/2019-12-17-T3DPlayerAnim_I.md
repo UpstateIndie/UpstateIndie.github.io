@@ -181,8 +181,24 @@ Click the icon in the top-middle-ish of your screen to launch the Shape Editor. 
   <img src="/img/shapeEditor.PNG" height="374">
   </div>
 </p><br>
-
-
-
-
-
+Once the Shape Editor opens up look to the top right of the screen and click the <b>Library</b> tab. Right under that, click the dropdown box and navigate down to <filepath>art/shapes/actors/ybot</filepath> and click that.(TODO-add 1,2,3 to pic)
+<br><br>
+<p>
+  <div align="center">
+  <img src="/img/shapeEdSelect.PNG" height="203">
+  </div>
+</p><br>
+Once you do that, you'll see that you are now inside the new directory that we created earlier to keep our new T-Pose and animations:(TODO-go over 'Force DAE')
+<br>
+<p>
+  <div align="center">
+  <img src="/img/shapeEdNew.PNG" height="203">
+  </div>
+</p><br>
+Double click the ybot file there and the ShapeEditor will load up your model. With your mouse cursor hovering over the 3D viewport, you can hold <b>middle mouse button</b> and drag to reposition the view so you can see the model better:
+<br>
+<p>
+  <div align="center">
+  <img src="/img/shapeEdYbot.PNG" height="586">
+  </div>
+</p><br>
