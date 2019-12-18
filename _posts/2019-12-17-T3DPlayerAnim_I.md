@@ -220,6 +220,7 @@ Very cool! Now we are ready to plug in some animations!
 <br><br>
 <h3>STEP 3: TSShapeConstructor in Script</h3>
 Now, let's get back to the TSShapeConstructor stuff. You might not realize it but just now when we changed the name of those nodes and clicked the save button, Torque automagically added a new ybot.cs file in the directory where your new model is located. Check in <b>art/shapes/actors/ybot/</b> and you should see a new <b>ybot.cs</b> file(or whatever your model is named). This is important for you to understand because right now we are going to use the power of that script. Rather than navigating through the Editor performing the same tasks over and over, we will just plug our animations into this script.
+<br><br>
 <b>1-</b> Go ahead and open the art/shapes/actors/ybot.cs file now. It should look like this:
 <br><br>
 <b>singleton TSShapeConstructor(YbotDAE)<br>
@@ -237,7 +238,7 @@ What's important to understand is that the <b>TSShapeConstructor</b> is being ca
 <br><br>
 <i>The second block of code will be executed any time this model is loaded up. So from here on out, even if you spawn in an AIPlayer using this same model, those nodes are going to be renamed by this script for you.</i>
 <br><br>
-  <b>2-</b> Alright, let's get this animated already! <b>3, 2, 1, GO!</b> Here I'm going to provide the script for this to work, and then in Part II we'll cover how the TSShapeConstructor works using this script. Add the new lines from the script below so that it looks just like the example. You could even just copy this entire script and replace all of what's in yours:
+<b>2-</b> Alright, let's get this animated already! <b>3, 2, 1, GO!</b> Here I'm going to provide the script for this to work, and then in Part II we'll cover how the TSShapeConstructor works using this script. Add the new lines from the script below so that it looks just like the example. You could even just copy this entire script and replace all of what's in yours:
 <br><br>
 <b>singleton TSShapeConstructor(YbotDAE)<br>
 &#123;<br>
