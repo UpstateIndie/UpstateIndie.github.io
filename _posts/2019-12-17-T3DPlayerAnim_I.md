@@ -213,7 +213,7 @@ Now click <b>mixamorig_HeadTop_End</b> and rename it to <b>CAM</b> and hit enter
 <br>
 <p>
   <div align="center">
-  <img src="/img/camNode.PNG" height="384"> 
+  <img src="/img/camNodeNew.PNG" height="498"> 
   </div>
 </p><br>
 Very cool! Now we are ready to plug in some animations!
