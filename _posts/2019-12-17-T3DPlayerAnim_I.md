@@ -105,7 +105,35 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br><br>
 <b>4-</b> Extract all of the .zip animation files into the <filepath>art/shapes/actors/ybot/Anims/</filepath> directory and the single ybot.zip file into the <filepath>art/shapes/actors/ybot/</filepath> directory. This structure is going to be important in a bit when we use the script to hook all this into Torque.
 <br><br>
-<b>5-</b>Open the file <filepath>art/datablocks/player.cs</filepath> and scroll down nearer the bottom to the Player datablock. The datablock holds information about our Player, and it starts off like this: 
+<b>5-</b> Open the file <filepath>art/datablocks/player.cs</filepath> and scroll down nearer the bottom to the Player datablock. The datablock holds information about our Player, and it starts off like this: 
+<br><br>
+<b>
+datablock PlayerData(DefaultPlayerData)<br>
+{<br>
+   renderFirstPerson = false;<br>
+   firstPersonShadows = true;<br>
+   computeCRC = false;</b><br>
+  <br>
+  <filepath>// Third person shape</filepath><br>
+  <b>shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";<br>
+   ...</b><br>
+<br>
+<b>6-</b> Update the shapefile entry so that it points to your new <b>ybot.DAE</b> file like so:
+<br><br>
+<b>datablock PlayerData(DefaultPlayerData)<br>
+{<br>
+   renderFirstPerson = false;<br>
+   firstPersonShadows = true;<br>
+   computeCRC = false;</b><br>
+   <br>
+   <filepath>// Third person shape</filepath><br>
+   <filepath>//shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";</filepath><br>
+   <b>shapeFile = "art/shapes/actors/ybot/ybot.DAE";<br>
+   ...</b><br>
+<br>
+Notice that I just commented out the original soldier_rigged.DAE line and added a new one below it. By commenting, I mean that I placed <b>//</b> in front of that line so that Torque will ignore that line when executing this file. This way, if you ever want to reference the existing Soldier model in the future it's easy to just comment out your new line and uncomment the original one to go right back to the original Soldier.
+<br><br>
+<b>7-</b> Before we start up Torque we are going to make a small change to our spawn code so that we aren't in first person mode. Open the file <filepath>scripts/server/gameCore.cs</filepath> and search for the function:
 <br><br>
 
 
