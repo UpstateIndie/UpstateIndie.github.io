@@ -107,8 +107,7 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br><br>
 <b>5-</b> Open the file <filepath>art/datablocks/player.cs</filepath> and scroll down nearer the bottom to the Player datablock. The datablock holds information about our Player, and it starts off like this:<br>
 <br>
-<!--
-<b>datablock PlayerData(DefaultPlayerData)<br>
+<!--b>datablock PlayerData(DefaultPlayerData)<br>
 &#123;<br>
 renderFirstPerson = false&#59;<br>
 firstPersonShadows = true&#59;<br>
@@ -116,11 +115,11 @@ computeCRC = false&#59;<br>
 &#47;&#47; Third person shape<br>
 shapeFile = &quot;art/shapes/actors/Soldier/soldier_rigged.DAE&quot;&#59;<br>
 ...<br>
-&#125;</b><br>
+&#125;</b--><br>
 <br>
 <b>6-</b> Update the shapefile entry so that it points to your new <b>ybot.DAE</b> file like so:
 <br><br>
-<b>datablock PlayerData(DefaultPlayerData)<br>
+<!--b>datablock PlayerData(DefaultPlayerData)<br>
 &#123;<br>
 renderFirstPerson = false&#59;<br>
 firstPersonShadows = true&#59;<br>
@@ -130,41 +129,41 @@ computeCRC = false&#59;<br>
 &#47;&#47; shapeFile = &quot;art/shapes/actors/Soldier/soldier_rigged.DAE&quot;&#59;<br>
 shapeFile = &quot;art/shapes/actors/ybot/ybot.DAE&quot;&#59;<br>
 ...<br>
-&#125;</b><br>
+&#125;</b--><br>
 <br>
-Notice that I just commented out the original soldier_rigged.DAE line and added a new one below it. By commenting, I mean that I placed <b>//</b> in front of that line so that Torque will ignore that line when executing this file. This way, if you ever want to reference the existing Soldier model in the future it's easy to just comment out your new line and uncomment the original one to go right back to the original Soldier.
+Notice that I just commented out the original soldier_rigged.DAE line and added a new one below it. By commenting, I mean that I placed <!--b>//</b--> in front of that line so that Torque will ignore that line when executing this file. This way, if you ever want to reference the existing Soldier model in the future it's easy to just comment out your new line and uncomment the original one to go right back to the original Soldier.
 <br><br>
 <b>7-</b> Before we start up Torque we are going to make a small change to our spawn code so that we aren't in first person mode. Open the file <filepath>scripts/server/gameCore.cs</filepath> and search for the function:
 <br><br>
-<b>function GameCore::spawnPlayer(&#37;game, &#37;client, &#37;spawnPoint, &#37;noControl)<br>
+<!--b>function GameCore::spawnPlayer(&#37;game, &#37;client, &#37;spawnPoint, &#37;noControl)<br>
 &#123;<br>
 ...<br>
-&#125;</b><br>
+&#125;</b--><br>
 <br>
 Within this function find where it says:
 <br><br>
-<b>&#47;&#47; Give the client control of the player
-&#37;client.player = &#37;player&#59;</b><br>
+<!--b>&#47;&#47; Give the client control of the player
+&#37;client.player = &#37;player&#59;</b--><br>
 <br>
 Right below that line add this line:<br>
-<br>
+<!--br>
 <b>&#37;client.setFirstPerson(false)&#59;</b><br>
-<br>
+<br-->
 <b>8-</b> Since we are already in the gameCore.cs file, we should go ahead and remove the existing loadout for the Player so that we don't have our character equipping weapons they aren't ready to use yet. In the same <filepath>scripts/server/gameCore.cs</filepath> file find the function:<br>
-<br>
+<!--br>
 <b>function GameCore::preparePlayer(&#37;game, &#37;client)<br>
 &#123;
 ...<br>
-&#125;</b><br>
+&#125;</b--><br>
 <br>
 Find the line <b>&#37;game.loadOut(&#37;client.player)</b> inside that function and comment it out. Remember, commenting is just adding <b>//</b> in front of that line:<br>
-<br>
+<!--br>
 <b>&#47;&#47;&#37;game.loadOut(&#37;client.player)</b><br>
-<br>
+<br-->
 Now the Player won't try to equip weapons without the proper nodes in place.
 <br><br>
 <b>9-</b> Okay, double click your Torque3D.exe to start up the engine. Once on the title screen, click the Play button and choose the Empty Room level. You should notice your loading bar is processing the new .DAE file that you just pointed to in the Player datablock. When the level loads, you should have your new character model standing there with its arms out in a TPose. Sweet!
-<br> -->
+<br>
 <p>
   <div align="center">
   <img src="/img/feet.PNG" height="374">
