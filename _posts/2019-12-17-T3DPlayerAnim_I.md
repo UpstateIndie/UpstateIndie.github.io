@@ -156,7 +156,7 @@ Right below that line add this line:<br>
 ...<br>
 &#125;</b--><br>
 <br>
-Find the line <b>&#37;game.loadOut(&#37;client.player)</b> inside that function and comment it out. Remember, commenting is just adding <b>//</b> in front of that line:<br>
+Find the line <!--b>%game.loadOut(%client.player)</b--> inside that function and comment it out. Remember, commenting is just adding <!--b>//</b--> in front of that line:<br>
 <!--br>
 <b>&#47;&#47;&#37;game.loadOut(&#37;client.player)</b><br>
 <br-->
@@ -222,7 +222,7 @@ Very cool! Now we are ready to plug in some animations!
 Now, let's get back to the TSShapeConstructor stuff. You might not realize it but just now when we changed the name of those nodes and clicked the save button, Torque automagically added a new ybot.cs file in the directory where your new model is located. Check in <b>art/shapes/actors/ybot/</b> and you should see a new <b>ybot.cs</b> file(or whatever your model is named). This is important for you to understand because right now we are going to use the power of that script. Rather than navigating through the Editor performing the same tasks over and over, we will just plug our animations into this script.
 <b>1-</b> Go ahead and open the art/shapes/actors/ybot.cs file now. It should look like this:
 <br><br>
-<b>singleton TSShapeConstructor(YbotDAE)<br>
+<!--b>singleton TSShapeConstructor(YbotDAE)<br>
 &#123;<br>
    baseShape = &quot;.&#47;ybot.DAE&quot;&#59;<br>
 &#125;<br>
@@ -231,7 +231,7 @@ function YbotDAE::onLoad(&#37;this)<br>
 &#123;<br>
    &#37;this.renameNode(&quot;mixamorig_RightEye&quot;, &quot;EYE&quot;)&#59;<br>
    &#37;this.renameNode(&quot;mixamorig_HeadTop_End&quot;, &quot;CAM&quot;)&#59;<br>
-&#125;</b><br>
+&#125;</b--><br>
 <br>
 What's important to understand is that the <b>TSShapeConstructor</b> is being called from script in the first block to load the <b>./ybot.DAE</b> file. You'll notice that the baseShape has <b>./</b> in front of the ybot.DAE filename. All this means is that Torque is going to search in the same folder that the script is in to find this .DAE file.
 <br><br>
@@ -239,7 +239,7 @@ What's important to understand is that the <b>TSShapeConstructor</b> is being ca
 <br><br>
   <b>2-</b> Alright, let's get this animated already! <b>3, 2, 1, GO!</b> Here I'm going to provide the script for this to work, and then in Part II we'll cover how the TSShapeConstructor works using this script. Add the new lines from the script below so that it looks just like the example. You could even just copy this entire script and replace all of what's in yours:
 <br><br>
-<b>singleton TSShapeConstructor(YbotDAE)<br>
+<!--b>singleton TSShapeConstructor(YbotDAE)<br>
 &#123;<br>
    baseShape = &quot;.&#47;ybot.DAE&quot;&#59;<br>
 &#125;<br>
@@ -255,7 +255,7 @@ function YbotDAE::onLoad(&#37;this)<br>
    &#37;this.addSequence(&quot;./anims/PlayerAnim_Sprint_Back.dae&quot;, &quot;Sprint_backward&quot;, "0", "-1", "1", "0")&#59;<br>
    &#37;this.addSequence(&quot;./anims/PlayerAnim_Side.dae&quot;, &quot;Side&quot;, "0", "-1", "1", "0")&#59;<br>
    &#37;this.addSequence(&quot;./anims/PlayerAnim_Side_Right.dae&quot;, &quot;Side_Right&quot;, "0", "-1", "1", "0")&#59;<br>
-&#125;</b><br>
+&#125;</b--><br>
 <br>
 (TODO-Here we need to talk about changing the filenames of the animations)<br>
 Save the script file and now when we launch Torque and start up a level we have an animated character playing its <b>Root</b> animation:
