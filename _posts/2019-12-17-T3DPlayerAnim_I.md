@@ -114,7 +114,8 @@ firstPersonShadows = true;<br>
 computeCRC = false;<br>
 // Third person shape<br>
 shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";<br>
-...</b><br>
+...<br>
+}</b><br>
 <br>
 <b>6-</b> Update the shapefile entry so that it points to your new <b>ybot.DAE</b> file like so:
 <br><br>
@@ -127,12 +128,61 @@ computeCRC = false;<br>
 // Third person shape<br>
 //shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";<br>
 shapeFile = "art/shapes/actors/ybot/ybot.DAE";<br>
-...</b><br>
+...<br>
+}</b><br>
 <br>
 Notice that I just commented out the original soldier_rigged.DAE line and added a new one below it. By commenting, I mean that I placed <b>//</b> in front of that line so that Torque will ignore that line when executing this file. This way, if you ever want to reference the existing Soldier model in the future it's easy to just comment out your new line and uncomment the original one to go right back to the original Soldier.
 <br><br>
 <b>7-</b> Before we start up Torque we are going to make a small change to our spawn code so that we aren't in first person mode. Open the file <filepath>scripts/server/gameCore.cs</filepath> and search for the function:
 <br><br>
+<b>function GameCore::spawnPlayer(%game, %client, %spawnPoint, %noControl)<br>
+{<br>
+...<br>
+}</b><br>
+<br>
+Within this function find where it says:
+<br><br>
+<b>// Give the client control of the player
+%client.player = %player;</b><br>
+<br>
+Right below that line add this line:<br>
+<br>
+<b>%client.setFirstPerson(false);</b><br>
+<br>
+<b>8-</b> Since we are already in the gameCore.cs file, we should go ahead and remove the existing loadout for the Player so that we don't have our character equipping weapons they aren't ready to use yet. In the same <filepath>scripts/server/gameCore.cs</filepath> file find the function:<br>
+<br>
+<b>function GameCore::preparePlayer(%game, %client)<br>
+{
+...<br>
+}</b><br>
+<br>
+Find the line <b>%game.loadOut(%client.player)</b> inside that function and comment it out. Remember, commenting is just adding <b>//</b> in front of that line:<br>
+<br>
+<b>//%game.loadOut(%client.player)</b><br>
+<br>
+Now the Player won't try to equip weapons without the proper nodes in place.
+<br><br>
+<b>9-</b> Okay, double click your Torque3D.exe to start up the engine. Once on the title screen, click the Play button and choose the Empty Room level. You should notice your loading bar is processing the new .DAE file that you just pointed to in the Player datablock. When the level loads, you should have your new character model standing there with its arms out in a TPose. Sweet!
+<br>
+<p>
+  <div align="center">
+  <img src="/img/feet.PNG" height="768">
+  </div>
+</p><br>
+The first problem you'll likely notice is we are looking at the new character's feet. lol. We'll fix  that right now in Step 2-B.
+<br><br>
+<h3>STEP 2-B: TSShapeConstructor in the Editor</h3>
+Press F11 to open Torque's editor. <i>Depending on your keyboard and your computer's BIOS settings, certain keyboards with built in Function keys may require you to hold Fn and press F11. Chances are you won't encounter this but it's worth a mention.</i>
+<br><br>
+Click the icon in the top-middle-ish of your screen to launch the Shape Editor. It's the one that looks like a cube:(TODO-update pic with arrow)
+<br>
+<p>
+  <div align="center">
+  <img src="/img/shapeEditor.PNG" height="374">
+  </div>
+</p><br>
+
+
 
 
 
