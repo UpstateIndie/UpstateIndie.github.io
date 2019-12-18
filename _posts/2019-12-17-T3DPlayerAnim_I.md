@@ -166,7 +166,7 @@ Now the Player won't try to equip weapons without the proper nodes in place.
 <br>
 <p>
   <div align="center">
-  <img src="/img/feet.PNG" height="374">
+  <img src="/img/feet.png" height="374">
   </div>
 </p><br>
 The first problem you'll likely notice is we are looking at the new character's feet. lol. We'll fix  that right now in Step 2-B.
