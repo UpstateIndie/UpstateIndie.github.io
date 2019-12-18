@@ -107,6 +107,7 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br><br>
 <b>5-</b> Open the file <filepath>art/datablocks/player.cs</filepath> and scroll down nearer the bottom to the Player datablock. The datablock holds information about our Player, and it starts off like this:<br>
 <br>
+<!--
 <b>datablock PlayerData(DefaultPlayerData)<br>
 &#123;<br>
 renderFirstPerson = false&#59;<br>
@@ -163,7 +164,7 @@ Find the line <b>&#37;game.loadOut(&#37;client.player)</b> inside that function 
 Now the Player won't try to equip weapons without the proper nodes in place.
 <br><br>
 <b>9-</b> Okay, double click your Torque3D.exe to start up the engine. Once on the title screen, click the Play button and choose the Empty Room level. You should notice your loading bar is processing the new .DAE file that you just pointed to in the Player datablock. When the level loads, you should have your new character model standing there with its arms out in a TPose. Sweet!
-<br>
+<br> -->
 <p>
   <div align="center">
   <img src="/img/feet.PNG" height="374">
