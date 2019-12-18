@@ -184,11 +184,11 @@ Click the icon in the top-middle-ish of your screen to launch the Shape Editor. 
   <img src="/img/shapeEditor.PNG" height="374">
   </div>
 </p><br>
-Once the Shape Editor opens up look to the top right of the screen and click the <b>Library</b> tab. Right under that, click the dropdown box and navigate down to <b>art/shapes/actors/ybot</b> and click that.(TODO-add 1,2,3 to pic)
+Once the Shape Editor opens up look to the top right of the screen and click the <b>Library</b> tab. Right under that, click the dropdown box and navigate down to <b>art/shapes/actors/ybot</b> and click that.
 <br><br>
 <p>
   <div align="center">
-  <img src="/img/shapeEdSelect.PNG" height="203">
+  <img src="/img/shapeEdSelectNew.PNG" height="203">
   </div>
 </p><br>
 Once you do that, you'll see that you are now inside the new directory that we created earlier to keep our new T-Pose and animations:
@@ -205,11 +205,11 @@ Double click the ybot file there and the ShapeEditor will load up your model. Wi
   <img src="/img/shapeEdYbot.PNG" height="586">
   </div>
 </p><br>
-Alright, now let's turn our attention to the Properties section on the right side of the screen(right below the Shapes section where we just double clicked on our ybot file). Click the Node tab and then expand down the heirarchy of nodes down the Spine until it looks like the image below. Click the mixamorig_RightEye node and directly below in the Node Properties section rename the node to EYE and hit enter. (TODO-update pic with 1,2,3,4)
+Alright, now let's turn our attention to the Properties section on the right side of the screen(right below the Shapes section where we just double clicked on our ybot file). Click the Node tab and then expand down the heirarchy of nodes down the Spine until it looks like the image below. Click the mixamorig_RightEye node and directly below in the Node Properties section rename the node to EYE and hit enter.
 <br>
 <p>
   <div align="center">
-  <img src="/img/ShapeEdNodes.PNG" height="586">
+  <img src="/img/ShapeEdEYENew.PNG" height="411">
   </div>
 </p><br>
 Now click <b>mixamorig_HeadTop_End</b> and rename it to <b>CAM</b> and hit enter. After performing these changes click the file button(4 in image above) to save the changes. Go ahead and exit Torque now and restart it. Now when we load into the EmptyLevel mission our camera is hooked up to our new CAM node and we see things from a better perspective.
