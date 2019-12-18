@@ -109,12 +109,12 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br><br>
 <b>datablock PlayerData(DefaultPlayerData)</b><br>
 <b>{</b><br>
-<b>renderFirstPerson = false;</b><br>
-<b>firstPersonShadows = true;</b><br>
-<b>computeCRC = false;</b><br>
+<b>renderFirstPerson = false&#59</b><br>
+<b>firstPersonShadows = true&#59</b><br>
+<b>computeCRC = false&#59</b><br>
 <br>
 <filepath><b>&#47; &#47; Third person shape</b></filepath><br>
-<b>shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";</b><br>
+<b>shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE"&#59</b><br>
 <b>...</b><br>
 <br>
 <b>6-</b> Update the shapefile entry so that it points to your new <b>ybot.DAE</b> file like so:
