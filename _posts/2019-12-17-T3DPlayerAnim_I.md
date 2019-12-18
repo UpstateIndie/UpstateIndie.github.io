@@ -231,7 +231,7 @@ function YbotDAE::onLoad(%this)<br>
 {<br>
    %this.renameNode("mixamorig_RightEye", "EYE");<br>
    %this.renameNode("mixamorig_HeadTop_End", "CAM");<br>
-}<br>
+}</b><br>
 <br>
 What's important to understand is that the <b>TSShapeConstructor</b> is being called from script in the first block to load the <b>./ybot.DAE</b> file. You'll notice that the baseShape has <b>./</b> in front of the ybot.DAE filename. All this means is that Torque is going to search in the same folder that the script is in to find this .DAE file.
 <br><br>
