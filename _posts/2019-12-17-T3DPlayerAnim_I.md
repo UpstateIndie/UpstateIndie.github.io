@@ -109,11 +109,11 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br>
 <b>datablock PlayerData(DefaultPlayerData)<br>
 {<br>
-renderFirstPerson = false&#37;<br>
-firstPersonShadows = true&#37;<br>
-computeCRC = false&#37;<br>
+renderFirstPerson = false&#59;<br>
+firstPersonShadows = true&#59;<br>
+computeCRC = false&#59;<br>
 // Third person shape<br>
-shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE"&#37;<br>
+shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE"&#59;<br>
 ...<br>
 }</b><br>
 <br>
@@ -121,13 +121,13 @@ shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE"&#37;<br>
 <br><br>
 <b>datablock PlayerData(DefaultPlayerData)<br>
 {<br>
-renderFirstPerson = false&#37;<br>
-firstPersonShadows = true&#37;<br>
-computeCRC = false&#37;<br>
+renderFirstPerson = false&#59;<br>
+firstPersonShadows = true&#59;<br>
+computeCRC = false&#59;<br>
 <br>
 // Third person shape<br>
-//shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE"&#37;<br>
-shapeFile = "art/shapes/actors/ybot/ybot.DAE"&#37;<br>
+//shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE"&#59;<br>
+shapeFile = "art/shapes/actors/ybot/ybot.DAE"&#59;<br>
 ...<br>
 }</b><br>
 <br>
@@ -143,11 +143,11 @@ Notice that I just commented out the original soldier_rigged.DAE line and added 
 Within this function find where it says:
 <br><br>
 <b>// Give the client control of the player
-&#37;client.player = &#37;player;</b><br>
+&#37;client.player = &#37;player&#59;</b><br>
 <br>
 Right below that line add this line:<br>
 <br>
-<b>&#37;client.setFirstPerson(false);</b><br>
+<b>&#37;client.setFirstPerson(false)&#59;</b><br>
 <br>
 <b>8-</b> Since we are already in the gameCore.cs file, we should go ahead and remove the existing loadout for the Player so that we don't have our character equipping weapons they aren't ready to use yet. In the same <filepath>scripts/server/gameCore.cs</filepath> file find the function:<br>
 <br>
@@ -229,8 +229,8 @@ Now, let's get back to the TSShapeConstructor stuff. You might not realize it bu
 <br>
 function YbotDAE::onLoad(&#37;this)<br>
 {<br>
-   &#37;this.renameNode("mixamorig_RightEye", "EYE");<br>
-   &#37;this.renameNode("mixamorig_HeadTop_End", "CAM");<br>
+   &#37;this.renameNode("mixamorig_RightEye", "EYE")&#59;<br>
+   &#37;this.renameNode("mixamorig_HeadTop_End", "CAM")&#59;<br>
 }</b><br>
 <br>
 What's important to understand is that the <b>TSShapeConstructor</b> is being called from script in the first block to load the <b>./ybot.DAE</b> file. You'll notice that the baseShape has <b>./</b> in front of the ybot.DAE filename. All this means is that Torque is going to search in the same folder that the script is in to find this .DAE file.
@@ -246,15 +246,15 @@ What's important to understand is that the <b>TSShapeConstructor</b> is being ca
 <br>
 function YbotDAE::onLoad(&#37;this)<br>
 {<br>
-   &#37;this.renameNode("mixamorig_LeftEye", "EYE");<br>
-   &#37;this.renameNode("mixamorig_HeadTop_End", "CAM");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Root.dae", "Root", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Run.dae", "Run", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Back.dae", "Back", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Sprint.dae", "Sprint_forward", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_backward", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Side.dae", "Side", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0");<br>
+   &#37;this.renameNode("mixamorig_LeftEye", "EYE")&#59;<br>
+   &#37;this.renameNode("mixamorig_HeadTop_End", "CAM")&#59;<br>
+   &#37;this.addSequence("./anims/PlayerAnim_Root.dae", "Root", "0", "-1", "1", "0")&#59;<br>
+   &#37;this.addSequence("./anims/PlayerAnim_Run.dae", "Run", "0", "-1", "1", "0")&#59;<br>
+   &#37;this.addSequence("./anims/PlayerAnim_Back.dae", "Back", "0", "-1", "1", "0")&#59;<br>
+   &#37;this.addSequence("./anims/PlayerAnim_Sprint.dae", "Sprint_forward", "0", "-1", "1", "0")&#59;<br>
+   &#37;this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_backward", "0", "-1", "1", "0")&#59;<br>
+   &#37;this.addSequence("./anims/PlayerAnim_Side.dae", "Side", "0", "-1", "1", "0")&#59;<br>
+   &#37;this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0")&#59;<br>
 }</b><br>
 <br>
 (TODO-Here we need to talk about changing the filenames of the animations)<br>
