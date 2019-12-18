@@ -176,7 +176,7 @@ The first problem you'll likely notice is we are looking at the new character's 
 <h3>STEP 2-B: TSShapeConstructor in the Editor</h3>
 Press F11 to open Torque's editor. <i>Depending on your keyboard and your computer's BIOS settings, certain keyboards with built in Function keys may require you to hold Fn and press F11. Chances are you won't encounter this but it's worth a mention.</i>
 <br><br>
-Click the icon in the top-middle-ish of your screen to launch the Shape Editor. It's the one that looks like a cube:(TODO-update pic with arrow)
+Click the icon in the top-middle-ish of your screen to launch the Shape Editor. It's the one that looks like a cube:
 <br>
 <p>
   <div align="center">
