@@ -124,14 +124,14 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br><br>
 <b>datablock PlayerData(DefaultPlayerData)<br>
 &#123;<br>
-renderFirstPerson = false;<br>
-firstPersonShadows = true;<br>
-computeCRC = false;<br>
+&emsp;renderFirstPerson = false;<br>
+&emsp;firstPersonShadows = true;<br>
+&emsp;computeCRC = false;<br>
 <br>
-// Third person shape<br>
-// shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";<br>
-shapeFile = "art/shapes/actors/ybot/ybot.DAE";<br>
-...<br>
+&emsp;// Third person shape<br>
+&emsp;// shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";<br>
+&emsp;shapeFile = "art/shapes/actors/ybot/ybot.DAE";<br>
+&emsp;...<br>
 &#125;;</b><br>
 <br>
 Notice that I just commented out the original soldier_rigged.DAE line and added a new one below it. By commenting, I mean that I placed <b>//</b> in front of that line so that Torque will ignore that line when executing this file. This way, if you ever want to reference the existing Soldier model in the future it's easy to just comment out your new line and uncomment the original one to go right back to the original Soldier.
@@ -140,28 +140,28 @@ Notice that I just commented out the original soldier_rigged.DAE line and added 
 <br><br>
 <b>function GameCore::spawnPlayer(&#37;game, &#37;client, &#37;spawnPoint, &#37;noControl)<br>
 &#123;<br>
-...<br>
+&emsp;...<br>
 &#125;</b><br>
 <br>
 Within this function find where it says:
 <br><br>
-<b>// Give the client control of the player<br>
-&#37;client.player = &#37;player;</b><br>
+<b>&emsp;// Give the client control of the player<br>
+&emsp;%client.player = %player;</b><br>
 <br>
 Right below that line add this line:<br>
 <br>
-<b>&#37;client.setFirstPerson(false);</b><br>
+<b>&emsp;%client.setFirstPerson(false);</b><br>
 <br>
 <b>8-</b> Since we are already in the gameCore.cs file, we should go ahead and remove the existing loadout for the Player so that we don't have our character equipping weapons they aren't ready to use yet. In the same <filepath>scripts/server/gameCore.cs</filepath> file find the function:<br>
 <br>
-<b>function GameCore::preparePlayer(&#37;game, &#37;client)<br>
+<b>function GameCore::preparePlayer(%game, %client)<br>
 &#123;
-...<br>
+&emsp;...<br>
 &#125;</b><br>
 <br>
 Find the line <b>%game.loadOut(%client.player)</b> inside that function and comment it out. Remember, commenting is just adding <filepath>//</filepath> in front of that line:<br>
 <br>
-<b>//&#37;game.loadOut(&#37;client.player)</b><br>
+<b>&emsp;//%game.loadOut(%client.player)</b><br>
 <br>
 Now the Player won't try to equip weapons without the proper nodes in place.
 <br><br>
@@ -228,13 +228,13 @@ Now, let's get back to the TSShapeConstructor stuff. You might not realize it bu
 <br><br>
 <b>singleton TSShapeConstructor(YbotDAE)<br>
 &#123;<br>
-   baseShape = "./ybot.DAE";<br>
-&#125;<br>
+&emsp;baseShape = "./ybot.DAE";<br>
+&#125;;<br>
 <br>
-function YbotDAE::onLoad(&#37;this)<br>
+function YbotDAE::onLoad(%this)<br>
 &#123;<br>
-   &#37;this.renameNode("mixamorig_RightEye", "EYE");<br>
-   &#37;this.renameNode("mixamorig_HeadTop_End", "CAM");<br>
+&emsp;%this.renameNode("mixamorig_RightEye", "EYE");<br>
+&emsp;%this.renameNode("mixamorig_HeadTop_End", "CAM");<br>
 &#125;</b><br>
 <br>
 What's important to understand is that the <b>TSShapeConstructor</b> is being called from script in the first block to load the <b>./ybot.DAE</b> file. You'll notice that the baseShape has <b>./</b> in front of the ybot.DAE filename. All this means is that Torque is going to search in the same folder that the script is in to find this .DAE file.
@@ -245,20 +245,20 @@ What's important to understand is that the <b>TSShapeConstructor</b> is being ca
 <br><br>
 <b>singleton TSShapeConstructor(YbotDAE)<br>
 &#123;<br>
-   baseShape = "./ybot.DAE";<br>
-&#125;<br>
+&emsp;baseShape = "./ybot.DAE";<br>
+&#125;;<br>
 <br>
-function YbotDAE::onLoad(&#37;this)<br>
+function YbotDAE::onLoad(%this)<br>
 &#123;<br>
-   &#37;this.renameNode("mixamorig_LeftEye", "EYE");<br>
-   &#37;this.renameNode("mixamorig_HeadTop_End", "CAM");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Root.dae", "Root", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Run.dae", "Run", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Back.dae", "Back", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Sprint.dae", "Sprint_forward", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_backward", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Side.dae", "Side", "0", "-1", "1", "0");<br>
-   &#37;this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0");<br>
+&emsp;%this.renameNode("mixamorig_LeftEye", "EYE");<br>
+&emsp;%this.renameNode("mixamorig_HeadTop_End", "CAM");<br>
+&emsp;%this.addSequence("./anims/PlayerAnim_Root.dae", "Root", "0", "-1", "1", "0");<br>
+&emsp;%this.addSequence("./anims/PlayerAnim_Run.dae", "Run", "0", "-1", "1", "0");<br>
+&emsp;%this.addSequence("./anims/PlayerAnim_Back.dae", "Back", "0", "-1", "1", "0");<br>
+&emsp;%this.addSequence("./anims/PlayerAnim_Sprint.dae", "Sprint_forward", "0", "-1", "1", "0");<br>
+&emsp;%this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_backward", "0", "-1", "1", "0");<br>
+&emsp;%this.addSequence("./anims/PlayerAnim_Side.dae", "Side", "0", "-1", "1", "0");<br>
+&emsp;%this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0");<br>
 &#125;</b><br>
 <br>
 Save the script file and now when we launch Torque and start up a level we have an animated character playing its <b>Root</b> animation:
