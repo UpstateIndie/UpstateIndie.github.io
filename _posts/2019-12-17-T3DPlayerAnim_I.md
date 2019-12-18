@@ -112,7 +112,7 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 renderFirstPerson = false;<br>
 firstPersonShadows = true;<br>
 computeCRC = false;<br>
-// Third person shape<br>
+<filepath>// Third person shape</filepath><br>
 shapeFile = &quot;art/shapes/actors/Soldier/soldier_rigged.DAE&quot;;<br>
 ...<br>
 &#125;</b><br>
@@ -121,13 +121,13 @@ shapeFile = &quot;art/shapes/actors/Soldier/soldier_rigged.DAE&quot;;<br>
 <br><br>
 <b>datablock PlayerData(DefaultPlayerData)<br>
 &#123;<br>
-renderFirstPerson = false&#59;<br>
-firstPersonShadows = true&#59;<br>
-computeCRC = false&#59;<br>
+renderFirstPerson = false;<br>
+firstPersonShadows = true;<br>
+computeCRC = false;<br>
 <br>
-&#47;&#47; Third person shape<br>
-&#47;&#47; shapeFile = &quot;art/shapes/actors/Soldier/soldier_rigged.DAE&quot;&#59;<br>
-shapeFile = &quot;art/shapes/actors/ybot/ybot.DAE&quot;&#59;<br>
+<filepath>// Third person shape</filepath><br>
+// shapeFile = <filepath>&quot;art/shapes/actors/Soldier/soldier_rigged.DAE&quot;</filepath>;<br>
+shapeFile = <filepath>&quot;art/shapes/actors/ybot/ybot.DAE&quot;</filepath>;<br>
 ...<br>
 &#125;</b><br>
 <br>
@@ -142,7 +142,7 @@ Notice that I just commented out the original soldier_rigged.DAE line and added 
 <br>
 Within this function find where it says:
 <br><br>
-<b>&#47;&#47; Give the client control of the player
+<b><filepath>// Give the client control of the player</filepath><br>
 &#37;client.player = &#37;player&#59;</b><br>
 <br>
 Right below that line add this line:<br>
