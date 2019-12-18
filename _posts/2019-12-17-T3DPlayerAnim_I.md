@@ -50,7 +50,7 @@ Pick a character for your project. I grabbed up Ybot to use while making this tu
 When you click the download link you'll be presented with a popup with 2 options:<br>
 <p>
   <div align="center">
-  <img src="/img/tposeDownload.png" height="207">
+  <img src="/img/tposeDownload.PNG" height="207">
   </div>
 </p><br>
 Here you want to choose <b>Collada(Dae)</b> and <b>T-Pose</b>. Just drop the .zip file in a handy place where you can find it to unzip it soon. A lot of times I'll just drop it right on the desktop.
@@ -60,7 +60,7 @@ While we're at the mixamo site we may as well grab up some animations. Click the
 For each animation we download, a popup will appear when we click the Download button:<br>
 <p>
   <div align="center">
-  <img src="/img/animDownload.png" height="281">
+  <img src="/img/animDownload.PNG" height="281">
   </div>
 </p><br>
 <b>Format:</b> Choose <b>Collada(.Dae)</b> here. It is important to note that Torque can also use the .fbx format in 4.0, but that is beyond the scope of this tutorial.
@@ -213,7 +213,7 @@ Now click <b>mixamorig_HeadTop_End</b> and rename it to <b>CAM</b> and hit enter
 <br>
 <p>
   <div align="center">
-  <img src="/img/camNodeNew.PNG" height="498"> 
+  <img src="/img/camNodeNew.png" height="498"> 
   </div>
 </p><br>
 Very cool! Now we are ready to plug in some animations!
@@ -261,14 +261,14 @@ function YbotDAE::onLoad(&#37;this)<br>
 Save the script file and now when we launch Torque and start up a level we have an animated character playing its <b>Root</b> animation:
 <p>
   <div align="center">
-  <img src="/img/idle.PNG" height="768">(TODO-img too big)
+  <img src="/img/idle.png" height="768">(TODO-img too big)
   </div>
 </p><br>
 You should be able to use the w,a,s,d keys to move around and also hold shift to sprint:
 <br>
 <p>
   <div align="center">
-  <img src="/img/running.PNG" height="768">(TODO-img too big)
+  <img src="/img/running.png" height="768">(TODO-img too big)
   </div>
 </p><br>
 <br>
