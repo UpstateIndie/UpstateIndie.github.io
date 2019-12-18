@@ -202,3 +202,88 @@ Double click the ybot file there and the ShapeEditor will load up your model. Wi
   <img src="/img/shapeEdYbot.PNG" height="586">
   </div>
 </p><br>
+Alright, now let's turn our attention to the Properties section on the right side of the screen(right below the Shapes section where we just double clicked on our ybot file). Click the Node tab and then expand down the heirarchy of nodes down the Spine until it looks like the image below. Click the mixamorig_RightEye node and directly below in the Node Properties section rename the node to EYE and hit enter. (TODO-update pick with 1,2,3,4)
+<br>
+<p>
+  <div align="center">
+  <img src="/img/ShapeEdNodes.PNG" height="586">
+  </div>
+</p><br>
+Now click <b>mixamorig_HeadTop_End</b> and rename it to <b>CAM</b> and hit enter. After performing these changes click the file button(4 in image above) to save the changes. Go ahead and exit Torque now and restart it. Now when we load into the EmptyLevel mission our camera is hooked up to our new CAM node and we see things from a better perspective:
+<br>
+<p>
+  <div align="center">
+  <img src="/img/camNode.PNG" height="768">(TODO-img too big)
+  </div>
+</p><br>
+Very cool! Now we are ready to plug in some animations!
+<br><br>
+<h3>STEP 3: TSShapeConstructor in Script</h3>
+Now, let's get back to the TSShapeConstructor stuff. You might not realize it but just now when we changed the name of those nodes and clicked the save button, Torque automagically added a new ybot.cs file in the directory where your new model is located. Check in <b>art/shapes/actors/ybot/</b> and you should see a new <b>ybot.cs</b> file(or whatever your model is named). This is important for you to understand because right now we are going to use the power of that script. Rather than navigating through the Editor performing the same tasks over and over, we will just plug our animations into this script.
+<b>1-</b> Go ahead and open the art/shapes/actors/ybot.cs file now. It should look like this:
+<br><br>
+<b>singleton TSShapeConstructor(YbotDAE)<br>
+{<br>
+   baseShape = "./ybot.DAE";<br>
+};<br>
+<br>
+function YbotDAE::onLoad(%this)<br>
+{<br>
+   %this.renameNode("mixamorig_RightEye", "EYE");<br>
+   %this.renameNode("mixamorig_HeadTop_End", "CAM");<br>
+}<br>
+<br>
+What's important to understand is that the <b>TSShapeConstructor</b> is being called from script in the first block to load the <b>./ybot.DAE</b> file. You'll notice that the baseShape has <b>./</b> in front of the ybot.DAE filename. All this means is that Torque is going to search in the same folder that the script is in to find this .DAE file.
+<br><br>
+<i>The second block of code will be executed any time this model is loaded up. So from here on out, even if you spawn in an AIPlayer using this same model, those nodes are going to be renamed by this script for you.</i>
+<br><br>
+  <b>2-</b> Alright, let's get this animated already! <b>3, 2, 1, GO!</b> Here I'm going to provide the script for this to work, and then in Part II we'll cover how the TSShapeConstructor works using this script. Add the new lines from the script below so that it looks just like the example. You could even just copy this entire script and replace all of what's in yours:
+<br><br>
+<b>singleton TSShapeConstructor(YbotDAE)<br>
+{<br>
+   baseShape = "./ybot.DAE";<br>
+};<br>
+<br>
+function YbotDAE::onLoad(%this)<br>
+{<br>
+   %this.renameNode("mixamorig_LeftEye", "EYE");<br>
+   %this.renameNode("mixamorig_HeadTop_End", "CAM");<br>
+   %this.addSequence("./anims/PlayerAnim_Root.dae", "Root", "0", "-1", "1", "0");<br>
+   %this.addSequence("./anims/PlayerAnim_Run.dae", "Run", "0", "-1", "1", "0");<br>
+   %this.addSequence("./anims/PlayerAnim_Back.dae", "Back", "0", "-1", "1", "0");<br>
+   %this.addSequence("./anims/PlayerAnim_Sprint.dae", "Sprint_forward", "0", "-1", "1", "0");<br>
+   %this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_backward", "0", "-1", "1", "0");<br>
+   %this.addSequence("./anims/PlayerAnim_Side.dae", "Side", "0", "-1", "1", "0");<br>
+   %this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0");<br>
+}<br>
+<br>
+(TODO-Here we need to talk about changing the filenames of the animations)<br>
+Save the script file and now when we launch Torque and start up a level we have an animated character playing its <b>Root</b> animation:
+<p>
+  <div align="center">
+  <img src="/img/idle.PNG" height="768">(TODO-img too big)
+  </div>
+</p><br>
+You should be able to use the w,a,s,d keys to move around and also hold shift to sprint:
+<br>
+<p>
+  <div align="center">
+  <img src="/img/running.PNG" height="768">(TODO-img too big)
+  </div>
+</p><br>
+<br>
+<h3>CONCLUSION</h3>
+Let's recap. Now since this is a tutorial I went ahead and stepped you through all of the prerequisite knowledge required to get this initial movement state up and running. However, in the future you should now be able to take what you've learned here and do all of this super fast! Let's boil this tutorial down to its essence:
+<br><br>
+1- Download your T-Pose and animations.
+<br><br>
+2- Setup your datablock to point to your new character model.
+<br><br>
+3- Write a script that leverages the power of Torque's TSShapeConstructor to add your animations to the shape.
+<br><br>
+
+And there you have it! You are now free to integrate any mixamo characters or animations into your projects in 3 easy steps. All without ever having to touch a modeling app. In the following tutorial we will be breaking down those movement states a bit, looking closer at the <b>TSShapeConstructor<b> commands and how they work.
+<br><br>
+I hope you enjoyed this learning process as much as I did creating this tutorial. The main take away here is that you don't let Torque boggle your mind. Torque can be a bit daunting at first but once you learn the ropes it's as easy as <b>1, 2, 3</b>! 
+<br><br>
+Torque3D is Copyright &copy; 2012 GarageGame, LLC
