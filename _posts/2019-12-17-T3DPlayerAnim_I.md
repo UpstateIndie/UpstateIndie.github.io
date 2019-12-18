@@ -88,7 +88,7 @@ We need an animation for each action the Player is going to perform. Right now, 
 <br><br>
 <b>Side_Right:</b> Type Right Strafe in the search bar and pick an animation to download. Remember that mixamo calls this animation Right Strafe Walking(or similar) and Torque calls this animation Side_Right. Extract the animation file and rename it <b>PlayerAnim_Side_Right.DAE</b>.
 <br><br>
-To note here is that each animation has been renamed with the <b>PlayerAnim_</b> prefix. This isn't completely necessary, but it can be useful later on. Also the names of the actions are renamed from mixamo to fit with Torque naming conventions.
+To note here is that each animation has been renamed with the <b>PlayerAnim_</b> prefix. This isn't completely necessary, but it can be useful later on. Also the names of the actions are renamed from mixamo names to fit with Torque naming conventions.
 <br><br>
 <i>Here are a few things to think about for the future, when you are doing this on your own. Any of these animations can be played backwards. This means it is entirely possible to use a Walking animation from mixamo to be your Run and Back animation. Also a Strafe animation can be used for both Side and Side_Right if played backwards. And so on. We'll go over this more in Step 2-B below.
 </i><br><br>
@@ -105,7 +105,7 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br><br>
 <b>3-</b> Open up your newly created folder. You should now be at <filepath>art/shapes/actors/ybot/</filepath>(or whatever you call your model folder). Inside create one additional folder and name it Anims so you now have an <filepath>art/shapes/actors/ybot/Anims/</filepath> directory.
 <br><br>
-<b>4-</b> Extract all of the .zip animation files into the <filepath>art/shapes/actors/ybot/Anims/</filepath> directory and the single ybot.zip file into the <filepath>art/shapes/actors/ybot/</filepath> directory. This structure is going to be important in a bit when we use the script to hook all this into Torque.
+<b>4-</b> Move all of the renamed animation files into the <filepath>art/shapes/actors/ybot/Anims/</filepath> directory and the single ybot.zip file into the <filepath>art/shapes/actors/ybot/</filepath> directory. This structure is going to be important in a bit when we use the script to hook all this into Torque.
 <br><br>
 <b>5-</b> Open the file <filepath>art/datablocks/player.cs</filepath> and scroll down nearer the bottom to the Player datablock. The datablock holds information about our Player, and it starts off like this:<br>
 <br>
