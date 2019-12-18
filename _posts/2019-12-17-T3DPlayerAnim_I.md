@@ -99,19 +99,19 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br><br>
 <i>So what is this and how is it used?</i> Well, when you import a model into Torque the TSShapeConstructor sort of takes over in the background without you really noticing. What is important here is you realize that anytime you import a model into Torque, the TSShapeConstructor is called and it will spit out a new file in the folder where your imported .DAE file is located. This is crucial, let's step through this process so that we can get a closer look:
 <br><br>
-<b>1-</b> Open up the <filepath>art/shapes/actors/</filepath> folder. You'll see the original Soldier folder in there.
+<b>1-</b> Open up the <b>art/shapes/actors/</b> folder. You'll see the original Soldier folder in there.
 <br><br>
 <b>2-</b> Create a new folder inside named <b>ybot</b>(or whatever you call your model). Note that whatever you name this folder, you are going to need to remember very soon.
 <br><br>
-<b>3-</b> Open up your newly created folder. You should now be at <filepath>art/shapes/actors/ybot/</filepath>(or whatever you call your model folder). Inside create one additional folder and name it Anims so you now have an <filepath>art/shapes/actors/ybot/Anims/</filepath> directory.
+<b>3-</b> Open up your newly created folder. You should now be at <b>art/shapes/actors/ybot/</b>(or whatever you call your model folder). Inside create one additional folder and name it Anims so you now have an <b>art/shapes/actors/ybot/Anims/</b> directory.
 <br><br>
-<b>4-</b> Move all of the renamed animation files into the <filepath>art/shapes/actors/ybot/Anims/</filepath> directory and the single ybot.zip file into the <filepath>art/shapes/actors/ybot/</filepath> directory. This structure is going to be important in a bit when we use the script to hook all this into Torque.
+<b>4-</b> Move all of the renamed animation files into the <b>art/shapes/actors/ybot/Anims/</b> directory and the single ybot.zip file into the <b>art/shapes/actors/ybot/</b> directory. This structure is going to be important in a bit when we use the script to hook all this into Torque.
 <br><br>
-<b>5-</b> Open the file <filepath>art/datablocks/player.cs</filepath> and scroll down nearer the bottom to the Player datablock. The datablock holds information about our Player, and it starts off like this:<br>
+<b>5-</b> Open the file <b>art/datablocks/player.cs</b> and scroll down nearer the bottom to the Player datablock. The datablock holds information about our Player, and it starts off like this:<br>
 <br>
 <b>datablock PlayerData(DefaultPlayerData)<br>
 &#123;<br>
-renderFirstPerson = false;<br>
+&nbsp;renderFirstPerson = false;<br>
 firstPersonShadows = true;<br>
 computeCRC = false;<br>
 // Third person shape<br>
