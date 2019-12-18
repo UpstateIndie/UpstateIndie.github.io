@@ -86,16 +86,16 @@ email: "admin@upstateindie.com"
 # Social Buttons #
 ##################
 social:
-  - title: "facebook"
-    url: "https://www.facebook.com/upstateindie/?fref=ts"
+  #- title: "facebook"
+  #  url: "https://www.facebook.com/upstateindie/?fref=ts"
   - title: "twitter"
     url: "https://twitter.com/UpstateIndie/"
   #- title: "github"
   #  url: "https://github.com/UpstateIndie/"
   #- title: "bitcoin"
   #  url: "https://blockchain.info/address/1LHuKC9Em3KA5yoZaf7nngnNdf9K7s2gSi"
-  #- title: "rss"
-  #  url: "/feed.xml"
+  - title: "rss"
+    url: "/feed.xml"
 
 ############
 # 404 page #
