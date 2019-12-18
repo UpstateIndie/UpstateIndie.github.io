@@ -112,7 +112,7 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 renderFirstPerson = false&#59;<br>
 firstPersonShadows = true&#59;<br>
 computeCRC = false&#59;<br>
-// Third person shape<br>
+&#47;&#47; Third person shape<br>
 shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE"&#59;<br>
 ...<br>
 &#125;</b><br>
@@ -125,8 +125,8 @@ renderFirstPerson = false&#59;<br>
 firstPersonShadows = true&#59;<br>
 computeCRC = false&#59;<br>
 <br>
-// Third person shape<br>
-//shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE"&#59;<br>
+&#47;&#47; Third person shape<br>
+&#47;&#47; shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE"&#59;<br>
 shapeFile = "art/shapes/actors/ybot/ybot.DAE"&#59;<br>
 ...<br>
 &#125;</b><br>
@@ -142,7 +142,7 @@ Notice that I just commented out the original soldier_rigged.DAE line and added 
 <br>
 Within this function find where it says:
 <br><br>
-<b>// Give the client control of the player
+<b>&#47;&#47; Give the client control of the player
 &#37;client.player = &#37;player&#59;</b><br>
 <br>
 Right below that line add this line:<br>
@@ -158,7 +158,7 @@ Right below that line add this line:<br>
 <br>
 Find the line <b>&#37;game.loadOut(&#37;client.player)</b> inside that function and comment it out. Remember, commenting is just adding <b>//</b> in front of that line:<br>
 <br>
-<b>//&#37;game.loadOut(&#37;client.player)</b><br>
+<b>&#47;&#47;&#37;game.loadOut(&#37;client.player)</b><br>
 <br>
 Now the Player won't try to equip weapons without the proper nodes in place.
 <br><br>
@@ -224,7 +224,7 @@ Now, let's get back to the TSShapeConstructor stuff. You might not realize it bu
 <br><br>
 <b>singleton TSShapeConstructor(YbotDAE)<br>
 &#123;<br>
-   baseShape = "./ybot.DAE";<br>
+   baseShape = ".&#47;ybot.DAE";<br>
 &#125;<br>
 <br>
 function YbotDAE::onLoad(&#37;this)<br>
@@ -241,7 +241,7 @@ What's important to understand is that the <b>TSShapeConstructor</b> is being ca
 <br><br>
 <b>singleton TSShapeConstructor(YbotDAE)<br>
 &#123;<br>
-   baseShape = "./ybot.DAE";<br>
+   baseShape = ".&#47;ybot.DAE";<br>
 &#125;<br>
 <br>
 function YbotDAE::onLoad(&#37;this)<br>
