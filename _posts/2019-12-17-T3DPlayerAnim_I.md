@@ -136,7 +136,7 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br>
 Notice that I just commented out the original soldier_rigged.DAE line and added a new one below it. By commenting, I mean that I placed <b>//</b> in front of that line so that Torque will ignore that line when executing this file. This way, if you ever want to reference the existing Soldier model in the future it's easy to just comment out your new line and uncomment the original one to go right back to the original Soldier.
 <br><br>
-<b>7-</b> Before we start up Torque we are going to make a small change to our spawn code so that we aren't in first person mode. Open the file <filepath>scripts/server/gameCore.cs</filepath> and search for the function:
+<b>7-</b> Before we start up Torque we are going to make a small change to our spawn code so that we aren't in first person mode. Open the file <b>scripts/server/gameCore.cs</b> and search for the function:
 <br><br>
 <b>function GameCore::spawnPlayer(&#37;game, &#37;client, &#37;spawnPoint, &#37;noControl)<br>
 &#123;<br>
@@ -152,14 +152,14 @@ Right below that line add this line:<br>
 <br>
 <b>&emsp;%client.setFirstPerson(false);</b><br>
 <br>
-<b>8-</b> Since we are already in the gameCore.cs file, we should go ahead and remove the existing loadout for the Player so that we don't have our character equipping weapons they aren't ready to use yet. In the same <filepath>scripts/server/gameCore.cs</filepath> file find the function:<br>
+<b>8-</b> Since we are already in the gameCore.cs file, we should go ahead and remove the existing loadout for the Player so that we don't have our character equipping weapons they aren't ready to use yet. In the same <b>scripts/server/gameCore.cs</b> file find the function:<br>
 <br>
 <b>function GameCore::preparePlayer(%game, %client)<br>
 &#123;
 &emsp;...<br>
 &#125;</b><br>
 <br>
-Find the line <b>%game.loadOut(%client.player)</b> inside that function and comment it out. Remember, commenting is just adding <filepath>//</filepath> in front of that line:<br>
+Find the line <b>%game.loadOut(%client.player)</b> inside that function and comment it out. Remember, commenting is just adding <b>//</b> in front of that line:<br>
 <br>
 <b>&emsp;//%game.loadOut(%client.player)</b><br>
 <br>
@@ -169,7 +169,7 @@ Now the Player won't try to equip weapons without the proper nodes in place.
 <br>
 <p>
   <div align="center">
-  <img src="/img/feet.png" height="374">
+  <img src="/img/feet.png" height="384">
   </div>
 </p><br>
 The first problem you'll likely notice is we are looking at the new character's feet. lol. We'll fix  that right now in Step 2-B.
@@ -184,14 +184,14 @@ Click the icon in the top-middle-ish of your screen to launch the Shape Editor. 
   <img src="/img/shapeEditor.PNG" height="374">
   </div>
 </p><br>
-Once the Shape Editor opens up look to the top right of the screen and click the <b>Library</b> tab. Right under that, click the dropdown box and navigate down to <filepath>art/shapes/actors/ybot</filepath> and click that.(TODO-add 1,2,3 to pic)
+Once the Shape Editor opens up look to the top right of the screen and click the <b>Library</b> tab. Right under that, click the dropdown box and navigate down to <b>art/shapes/actors/ybot</b> and click that.(TODO-add 1,2,3 to pic)
 <br><br>
 <p>
   <div align="center">
   <img src="/img/shapeEdSelect.PNG" height="203">
   </div>
 </p><br>
-Once you do that, you'll see that you are now inside the new directory that we created earlier to keep our new T-Pose and animations:(TODO-go over 'Force DAE')
+Once you do that, you'll see that you are now inside the new directory that we created earlier to keep our new T-Pose and animations:
 <br>
 <p>
   <div align="center">
@@ -224,7 +224,7 @@ Very cool! Now we are ready to plug in some animations!
 <h3>STEP 3: TSShapeConstructor in Script</h3>
 Now, let's get back to the TSShapeConstructor stuff. You might not realize it but just now when we changed the name of those nodes and clicked the save button, Torque automagically added a new ybot.cs file in the directory where your new model is located. Check in <b>art/shapes/actors/ybot/</b> and you should see a new <b>ybot.cs</b> file(or whatever your model is named). This is important for you to understand because right now we are going to use the power of that script. Rather than navigating through the Editor performing the same tasks over and over, we will just plug our animations into this script.
 <br><br>
-<b>1-</b> Go ahead and open the art/shapes/actors/ybot.cs file now. It should look like this:
+<b>1-</b> Go ahead and open the <b>art/shapes/actors/ybot.cs</b> file now. It should look like this:
 <br><br>
 <b>singleton TSShapeConstructor(YbotDAE)<br>
 &#123;<br>
@@ -264,14 +264,14 @@ function YbotDAE::onLoad(%this)<br>
 Save the script file and now when we launch Torque and start up a level we have an animated character playing its <b>Root</b> animation:
 <p>
   <div align="center">
-  <img src="/img/idle.png" height="768">(TODO-img too big)
+  <img src="/img/idle.png" height="384">
   </div>
 </p><br>
 You should be able to use the w,a,s,d keys to move around and also hold shift to sprint:
 <br>
 <p>
   <div align="center">
-  <img src="/img/running.png" height="768">(TODO-img too big)
+  <img src="/img/running.png" height="384">
   </div>
 </p><br>
 <br>
