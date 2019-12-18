@@ -209,7 +209,7 @@ Alright, now let's turn our attention to the Properties section on the right sid
   <img src="/img/ShapeEdNodes.PNG" height="586">
   </div>
 </p><br>
-Now click <b>mixamorig_HeadTop_End</b> and rename it to <b>CAM</b> and hit enter. After performing these changes click the file button(4 in image above) to save the changes. Go ahead and exit Torque now and restart it. Now when we load into the EmptyLevel mission our camera is hooked up to our new CAM node and we see things from a better perspective:
+Now click <b>mixamorig_HeadTop_End</b> and rename it to <b>CAM</b> and hit enter. After performing these changes click the file button(4 in image above) to save the changes. Go ahead and exit Torque now and restart it. Now when we load into the EmptyLevel mission our camera is hooked up to our new CAM node and we see things from a better perspective.
 <br>
 <p>
   <div align="center">
