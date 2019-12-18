@@ -275,15 +275,15 @@ You should be able to use the w,a,s,d keys to move around and also hold shift to
 <h3>CONCLUSION</h3>
 Let's recap. Now since this is a tutorial I went ahead and stepped you through all of the prerequisite knowledge required to get this initial movement state up and running. However, in the future you should now be able to take what you've learned here and do all of this super fast! Let's boil this tutorial down to its essence:
 <br><br>
-1- Download your T-Pose and animations.
+<b>1-</b> Download your T-Pose and animations.
 <br><br>
-2- Setup your datablock to point to your new character model.
+<b>2-</b> Setup your datablock to point to your new character model.
 <br><br>
-3- Write a script that leverages the power of Torque's TSShapeConstructor to add your animations to the shape.
+<b>3-</b> Write a script that leverages the power of Torque's TSShapeConstructor to add your animations to the shape.
 <br><br>
 
 And there you have it! You are now free to integrate any mixamo characters or animations into your projects in 3 easy steps. All without ever having to touch a modeling app. In the following tutorial we will be breaking down those movement states a bit, looking closer at the <b>TSShapeConstructor<b> commands and how they work.
 <br><br>
 I hope you enjoyed this learning process as much as I did creating this tutorial. The main take away here is that you don't let Torque boggle your mind. Torque can be a bit daunting at first but once you learn the ropes it's as easy as <b>1, 2, 3</b>! 
 <br><br>
-Torque3D is Copyright &copy; 2012 GarageGame, LLC
+Torque3D is Copyright &copy; 2012 GarageGames, LLC
