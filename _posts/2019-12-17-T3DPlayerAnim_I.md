@@ -74,19 +74,21 @@ For each animation we download, a popup will appear when we click the Download b
 <h3>STEP 1-B: Movement Animations</h3>
 We need an animation for each action the Player is going to perform. Right now, specifically, we are going to choose the animations for the actions I've listed below.
 <br><br>
-<b>Root:</b> Type Idle in the search bar and pick an animation to download.
+<b>Root:</b> Type Idle in the search bar and pick an animation to download. Extract the animation file and rename it <b>PlayerAnim_Root.DAE</b>.
 <br><br>
-<b>Run:</b> Type Walking in the search bar and pick an animation to download. Remember that in mixamo terms this animation is called Walking and in Torque this animation is called Run.
+<b>Run:</b> Type Walking in the search bar and pick an animation to download. Remember that in mixamo terms this animation is called Walking and in Torque this animation is called Run. Extract the animation file and rename it <b>PlayerAnim_Run.DAE</b>.
 <br><br>
-<b>Back:</b> Type Walking Backward in the search bar and pick an animation to download. Remember that mixamo calls this animation Walking Backward and Torque calls this animation Back.
+<b>Back:</b> Type Walking Backward in the search bar and pick an animation to download. Remember that mixamo calls this animation Walking Backward and Torque calls this animation Back. Extract the animation file and rename it <b>PlayerAnim_Back.DAE</b>.
 <br><br>
-<b>Sprint_forward:</b> Type Running in the search bar and pick an animation to download. Remember that mixamo calls this animation Running and Torque calls this animation Sprint_forward.
+<b>Sprint_forward:</b> Type Running in the search bar and pick an animation to download. Remember that mixamo calls this animation Running and Torque calls this animation Sprint_forward. Extract the animation file and rename it <b>PlayerAnim_Sprint_forward.DAE</b>.
 <br><br>
-<b>Sprint_backward:</b> Type Running Backward in the search bar and pick an animation to download. Remember that mixamo calls this animation Running Backward and Torque calls this animation Sprint_backward.
+<b>Sprint_backward:</b> Type Running Backward in the search bar and pick an animation to download. Remember that mixamo calls this animation Running Backward and Torque calls this animation Sprint_backward. Extract the animation file and rename it <b>PlayerAnim_Sprint_backward.DAE</b>.
 <br><br>
-<b>Side:</b> Type Left Strafe in the search bar and pick an animation to download. Remember that mixamo calls this animation Left Strafe Walking(or similar) and Torque calls this animation Side. It is important to note that Side is strafing to the left.
+<b>Side:</b> Type Left Strafe in the search bar and pick an animation to download. Remember that mixamo calls this animation Left Strafe Walking(or similar) and Torque calls this animation Side. It is important to note that Side is strafing to the left. Extract the animation file and rename it <b>PlayerAnim_Side.DAE</b>.
 <br><br>
-<b>Side_Right:</b> Type Right Strafe in the search bar and pick an animation to download. Remember that mixamo calls this animation Right Strafe Walking(or similar) and Torque calls this animation Side_Right.
+<b>Side_Right:</b> Type Right Strafe in the search bar and pick an animation to download. Remember that mixamo calls this animation Right Strafe Walking(or similar) and Torque calls this animation Side_Right. Extract the animation file and rename it <b>PlayerAnim_Side_Right.DAE</b>.
+<br><br>
+To note here is that each animation has been renamed with the <b>PlayerAnim_</b> prefix. This isn't completely necessary, but it can be useful later on. Also the names of the actions are renamed from mixamo to fit with Torque naming conventions.
 <br><br>
 <i>Here are a few things to think about for the future, when you are doing this on your own. Any of these animations can be played backwards. This means it is entirely possible to use a Walking animation from mixamo to be your Run and Back animation. Also a Strafe animation can be used for both Side and Side_Right if played backwards. And so on. We'll go over this more in Step 2-B below.
 </i><br><br>
@@ -258,7 +260,6 @@ function YbotDAE::onLoad(&#37;this)<br>
    &#37;this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0");<br>
 &#125;</b><br>
 <br>
-(TODO-Here we need to talk about changing the filenames of the animations since we hadn't yet and the animations are still using the old names from Mixamo)<br>
 Save the script file and now when we launch Torque and start up a level we have an animated character playing its <b>Root</b> animation:
 <p>
   <div align="center">
