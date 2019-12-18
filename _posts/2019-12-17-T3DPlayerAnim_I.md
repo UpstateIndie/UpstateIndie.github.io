@@ -257,7 +257,7 @@ function YbotDAE::onLoad(&#37;this)<br>
    &#37;this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0");<br>
 &#125;</b><br>
 <br>
-(TODO-Here we need to talk about changing the filenames of the animations)<br>
+(TODO-Here we need to talk about changing the filenames of the animations since we hadn't yet and the animations are still using the old names from Mixamo)<br>
 Save the script file and now when we launch Torque and start up a level we have an animated character playing its <b>Root</b> animation:
 <p>
   <div align="center">
