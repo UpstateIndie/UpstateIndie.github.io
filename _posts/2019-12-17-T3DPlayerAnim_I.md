@@ -109,10 +109,10 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br>
 <b>datablock PlayerData(DefaultPlayerData)<br>
 &#123;<br>
-renderFirstPerson = false&#59;<br>
-firstPersonShadows = true&#59;<br>
-computeCRC = false&#59;<br>
-&#47;&#47; Third person shape<br>
+renderFirstPerson = false;<br>
+firstPersonShadows = true;<br>
+computeCRC = false;<br>
+// Third person shape<br>
 shapeFile = &quot;art/shapes/actors/Soldier/soldier_rigged.DAE&quot;;<br>
 ...<br>
 &#125;</b><br>
