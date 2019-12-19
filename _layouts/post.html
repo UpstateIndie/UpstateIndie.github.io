@@ -38,7 +38,9 @@
 
           {% if jekyll.environment == "production" %}
             {% if page.category != "announcements" %}
-              {% include comments.html %}
+              {% if page.category != "scratch" %}
+                {% include comments.html %}
+              {% endif %}
             {% endif %}
           {% endif %}
 
