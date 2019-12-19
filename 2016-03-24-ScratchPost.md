@@ -1,9 +1,0 @@
----
-layout: post
-section-type: post
-title: Scratching Post
-category: tech
-tags: [ 'tech' ]
----
-
-This is our 'Scratching Post'. Here we just post up snippets of test code for the blog. If things on this post look weird, it's probably because I'm in the process of testing additional content here.
