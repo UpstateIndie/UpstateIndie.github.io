@@ -2,7 +2,7 @@
 layout: post
 section-type: post
 title: Scratching Post
-category: tech
+category: scratch
 tags: [ 'tech' ]
 ---
 
