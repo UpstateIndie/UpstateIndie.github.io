@@ -29,7 +29,7 @@ The goal here is to introduce newcomers to the engine, so I want to keep this cl
 <br><br>
 <b>What You're Gonna Need:</b>
 <br>
-Torque3D MIT 3.10.1 BINARY: <a href="http://wiki.torque3d.org/main:downloads" target="_blank">Torque3D Binaries</a>
+Torque3D MIT 3.10.1 BINARY: <a href="https://github.com/GarageGames/Torque3D/releases/download/v3.10.1/Torque3D-3101-WinBinaries.zip" target="_blank">Torque3D Binaries</a>
 <br><br>
 A Mixamo account at <a href="https://www.mixamo.com/#/" target="_blank">mixamo</a>. No I don't work for Mixamo, they just offer something amazing for us to leverage here.
 <br><br>
