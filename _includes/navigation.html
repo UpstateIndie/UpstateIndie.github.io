@@ -1,9 +1,9 @@
 
 <!-- Navigation Start -->
 
-<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
   <div class="container">
-    
+
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
         <i class="fa fa-bars"></i>
@@ -21,10 +21,11 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse navbar-right navbar-main-collapse"-->
       <ul class="nav navbar-nav">
-        <li><a class="page-scroll" href="{{site.baseurl}}/projects/">Projects</a></li>
-        <li><a class="page-scroll" href="{{site.baseurl}}/blog/">Blog</a></li>
-        <li><a class="page-scroll" href="{{site.baseurl}}/about/">About</a></li>
-        <li><a class="page-scroll" href="{{site.baseurl}}/contact/">Contact</a></li>
+        <meta itemprop="name" content="Main Menu">
+        <li><a itemprop="url" class="page-scroll" href="{{site.baseurl}}/projects/">Projects</a></li>
+        <li><a itemprop="url" class="page-scroll" href="{{site.baseurl}}/blog/">Blog</a></li>
+        <li><a itemprop="url" class="page-scroll" href="{{site.baseurl}}/about/">About</a></li>
+        <li><a itemprop="url" class="page-scroll" href="{{site.baseurl}}/contact/">Contact</a></li>
       </ul>
     </div>
   </div>
