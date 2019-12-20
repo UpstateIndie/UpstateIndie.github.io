@@ -25,4 +25,4 @@ Upstate Indie Website and Blog design Copyright &copy; 2016-2019 Jesse Allen
 
 Upstate Indie Copyright &copy; 2019 Upstate Indie, LLC
 
-The contents of UpstateIndie.com is the intellectual property of Upstate Indie, LLC unless explicity specified otherwise.
+The contents of UpstateIndie.com and UpstateIndie.github.io are the intellectual properties of Upstate Indie, LLC unless explicity specified otherwise.
