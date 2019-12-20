@@ -13,7 +13,22 @@
   {% if page.layout == "index" %}
     <meta name="description" content="{{site.description}}">
   {% endif %}
-    
+  {% if page.layout == "projects" %}
+    <meta name="description" content="Projects by Upstate Indie, LLC">
+  {% endif %}
+  {% if page.layout == "blog" %}
+    <meta name="description" content="Blog of Upstate Indie, LLC">
+  {% endif %}  
+  {% if page.layout == "about" %}
+    <meta name="description" content="About Upstate Indie, LLC">
+  {% endif %}
+  {% if page.layout == "contact" %}
+    <meta name="description" content="Contact Upstate Indie, LLC">
+  {% endif %}
+  {% if page.layout == "terms" %}
+    <meta name="description" content="Terms of Use and Privacy Statement for upstateindie.com">
+  {% endif %}
+  
   <link rel="canonical" href="{{page.url | replace:'index.html','' | prepend: site.baseurl}}">
   <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
 
@@ -30,23 +45,18 @@
     <link href="{{site.baseurl}}/css/panes.css" rel="stylesheet">
   {% endif %}  
   {% if page.layout == "projects" %}
-    <meta name="description" content="Projects by Upstate Indie, LLC">
     <link href="{{site.baseurl}}/css/panes.css" rel="stylesheet">
   {% endif %}
   {% if page.layout == "blog" %}
-    <meta name="description" content="Blog of Upstate Indie, LLC">
     <link href="{{site.baseurl}}/css/panes.css" rel="stylesheet">
   {% endif %}  
   {% if page.layout == "about" %}
-    <meta name="description" content="About Upstate Indie, LLC">
     <link href="{{site.baseurl}}/css/panes.css" rel="stylesheet">
   {% endif %}
   {% if page.layout == "contact" %}
-    <meta name="description" content="Contact Upstate Indie, LLC">
     <link href="{{site.baseurl}}/css/panes.css" rel="stylesheet">
   {% endif %}
   {% if page.layout == "terms" %}
-    <meta name="description" content="Terms of Use and Privacy Statement for upstateindie.com">
     <link href="{{site.baseurl}}/css/panes.css" rel="stylesheet">
   {% endif %}
 
