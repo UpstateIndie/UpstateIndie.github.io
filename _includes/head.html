@@ -12,7 +12,7 @@
   
   <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
   
-  {% if page.layout == "index" %}
+  <!-- {% if page.layout == "index" %}
     <meta name="description" content="{{site.description}}">
   {% endif %}
   {% if page.layout == "projects" %}
@@ -29,7 +29,9 @@
   {% endif %}
   {% if page.layout == "terms" %}
     <meta name="description" content="Terms of Use and Privacy Statement for upstateindie.com">
-  {% endif %}
+  {% endif %} -->
+  
+  <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
   
   <link rel="canonical" href="{{page.url | replace:'index.html','' | prepend: site.baseurl}}">
 
