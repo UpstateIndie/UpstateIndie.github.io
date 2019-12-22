@@ -56,7 +56,7 @@ Now click the Armature, then hover your mouse over the 3D viewport and press Del
 <p>
   <div align="center">
   <img src="/img/blendLODstep2-1.PNG" height="90">
-    <i>This is using Mixamo's ybot model.</i>
+  <br><i>This is using Mixamo's ybot model.</i>
   </div>
 </p><br>
 You'll notice that the 3D viewport is filled with a hugely scaled version of the original model. Zoom out with your mouse so you can see what's going on.
