@@ -177,7 +177,7 @@ You can find more info about this modifier in the <a href="https://docs.blender.
 docs</a>.
 <br><br>
 
-<b>4-</b> With all of the duplicate versions of your model all stacked up, in the viewport you'll probably see 'squiggly' lines all across the meshes where they overlap.<br>
+<b>4-</b> With all of the duplicate versions of your model stacked up, in the viewport you'll probably see 'squiggly' lines all across the meshes where they overlap.<br>
 <p>
   <div align="center">
   <img src="/img/blendLODstep3-4.PNG" height="450">
