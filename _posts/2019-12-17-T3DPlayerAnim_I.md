@@ -22,6 +22,9 @@ A base understanding of downloading the engine and installing it is a prerequisi
 This tutorial is intended to be performed using the current release of Torque3D MIT(3.10.1) in its binary form. Version 4.0 is fast on the horizon, introducing a myriad of new features and additions, but we are going to keep it old school here and introduce those things as they are released. By binary I mean don't download and build Torque just grab the precompiled .exe(link below). I recommend a brand new download and we're just gonna take off right away with that. We're not worrying about customization, we are getting our Players running around and animated FAST.
 <br><br>
 In the future we may spruce things up a bit with a custom build in order to introduce new features but for now we are going to start from the ground up. We are not even going to have to use any sort of modeling software or animate our own models! By the end of this tutorial series we will have a vast library of animations at our disposal and the knowledge to use them in Torque3D MIT.
+<br><br>
+If you need LODs for your character model, I've put together a tutorial about that <a href="https://www.upstateindie.com/tutorials/2019/12/22/T3DPlayerLOD.html">here</a>. The LOD tutorial requires a basic knowledge of 
+Blender and Torque3D's LOD system.
 </i><br><br>
 <h3 text-align="center">INTRO</h3>
 Hi everyone! I wanted to take some time out of the busy Holidays to give a little back to the Community. In this tutorial, we will be covering animation of new Players in Torque3D. Torque really does make it easy to start having fun with your game ideas! Here I will be sharing a workflow that I currently use to get Player objects up and running quickly and easily. While this tutorial is intended for beginners, the information covered here could be useful to others as well.
