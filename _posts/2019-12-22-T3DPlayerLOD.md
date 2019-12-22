@@ -31,7 +31,7 @@ A Mixamo account at <a href="https://www.mixamo.com/#/" target="_blank">mixamo</
 <br><br>
 
 <h2>Step 1: Mixamo Download</h2>
-Alright, so one thing to go over about Mixamo that's important to remember if you follow this workflow. We want to download our characters in the <b>.fbx<b> format, NOT 
+Alright, so one thing to go over about Mixamo that's important to remember if you follow this workflow. We want to download our characters in the <b>.fbx</b> format, NOT 
 the usual <b>.DAE</b>. We can still ultimately end up with <b>.DAE</b> models to use in Torque, but for this LOD workflow it is important that we download the characters 
 from Mixamo in the <b>.fbx</b> format initially. Go ahead and download a character from <a href="https://www.mixamo.com/#/" target="_blank">mixamo</a>:<br>
 <p>
