@@ -50,12 +50,13 @@ actually have to rig it ourselves and this process is fairly quick.
   <div align="center">
   <img src="/img/blendLODorig.PNG" height="164">
   </div>
-</p><br><i>This is using Mixamo's ybot model.</i><br>
-
+</p>
+<br><br>
 Now click the Armature, then hover your mouse over the 3D viewport and press Delete. The heirarchy should now look like this:<br>
 <p>
   <div align="center">
   <img src="/img/blendLODstep2-1.PNG" height="90">
+    <i>This is using Mixamo's ybot model.</i>
   </div>
 </p><br>
 You'll notice that the 3D viewport is filled with a hugely scaled version of the original model. Zoom out with your mouse so you can see what's going on.
