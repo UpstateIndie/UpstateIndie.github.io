@@ -112,7 +112,6 @@ top right and expand the heirarchy for each mesh, you'll see a visual indicator 
   <img src="/img/blendLODstep2-5.PNG" height="204">
   </div>
 </p><br>
-<br>
 <b>(A)</b>Click on a mesh, be sure you are in the Modifier Properties tab(1), and click the <b>X</b>(2) in the top right of the modifier block to delete it.
 <p>
   <div align="center">
