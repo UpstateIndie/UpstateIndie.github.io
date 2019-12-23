@@ -7,13 +7,13 @@ tags: [ 'tutorials' ]
 ---
 
 <h3>DISCLAIMER</h3>
-<i>I am not responsible for anything you mess up with your project as a result of following this.
-<br><br>
-Throughout this tutorial I will refer to Torque3D MIT as Torque.
+<i>Throughout this tutorial I will refer to Torque3D MIT as Torque.
 <br><br>
 If you followed my Torque3D Player Animation I tutorial prior to this, nice, you understand how to get your characters into Torque. However, here we will be starting from scratch with a new character. This workflow will cause any existing animations you downloaded before to be incompatible with the new model that includes LODs.
 <br><br>
 A basic working knowledge of Blender usage and Torque3D's LOD system are both prerequisites to this, but I'll go over important specifics here. I will not be going over why you need to LOD or how the LODs work in Torque, as all of that is beyond the scope of this tutorial.
+<br><br>
+I am not responsible for anything you mess up with your project as a result of following this.
 </i><br><br>
 
 <h3 text-align="center">INTRO</h3>
