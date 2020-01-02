@@ -13,8 +13,8 @@
   <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
   <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }}{% else %}{{ site.description | truncate: 160  }}{% endif %}" />
   
-  <!-- link rel="canonical" href="{{page.url | replace:'index.html','' | prepend: site.baseurl}}" -->
-  <link rel="canonical" href="{{page.url | prepend: site.baseurl}}">
+  <link rel="canonical" href="{{page.url | replace:'index.html','' | prepend: site.baseurl}}">
+  <!-- link rel="canonical" href="{{page.url | prepend: site.baseurl}}" -->
   
   <!-- Bootstrap Core CSS -->
   <link rel="stylesheet" href="{{site.baseurl}}/css/bootstrap.min.css">
