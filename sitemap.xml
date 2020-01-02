@@ -4,7 +4,8 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {% for page in site.pages %}
-    {% if page.sitemap != null and page.sitemap != empty %}
+    <!-- {% if page.sitemap != null and page.sitemap != empty %} -->
+    {% unless page.sitemap.exclude == "yes" or page.name == "feed.xml" %}
       <url>
         <loc>{{ site.url }}{{ page.url }}</loc>
         {% if page.sitemap %}
@@ -19,7 +20,8 @@ layout: null
           {% endif %}
         {% endif %}
        </url>
-    {% endif %}
+    {% endunless %}
+    <!-- {% endif %} -->
   {% endfor %}
   {% for post in site.posts %}
     <url>
