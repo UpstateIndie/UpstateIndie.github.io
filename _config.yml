@@ -111,6 +111,7 @@ pages_list:
   Blog: 'blog'
   About: 'about'
   Contact: 'contact'
+  Terms: 'terms'
 
 # Exclusion list from the generated _site
 exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts"]
