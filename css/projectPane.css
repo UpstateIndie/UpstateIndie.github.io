@@ -10,7 +10,7 @@
 .projpane {
 	height: 400px;
 	width: 100%;
-	margin: 5px 1% 5px 1%;
+	margin: 5px 0px 5px;
 	background-image: url("/img/day-bg.png");
 	background-size: cover;
 	background-repeat: no-repeat;
