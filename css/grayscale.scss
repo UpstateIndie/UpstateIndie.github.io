@@ -250,7 +250,7 @@ filepath {
     margin-bottom: 135px;
     padding-top: 100px;
     padding-bottom: 20px;
-    width: 75%;
+    width: 100%;
     height: auto;
     background-color: $white;
     //box-shadow: 0px 5px 5px $primary; //#888888;
@@ -264,8 +264,7 @@ filepath {
         margin-bottom: 135px;
         padding-top: 100px;
         padding-bottom: 20px;        
-        //margin-top: 125px;
-        //padding-top: 125px;
+        width: 75%;
     }
     /* Added in { Personal } for responsive images in posts and section contents*/
     img {
