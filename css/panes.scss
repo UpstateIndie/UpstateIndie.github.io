@@ -236,7 +236,10 @@ sitemap:
   color: $primary;
   text-align: left;
   //margin-bottom: 8px;
-  margin: 0 25px 10px 25px; 
+  margin: 0px;
+  @media(min-width:768px) {
+    margin: 0 25px 10px 25px;
+  }
 }
 
 .subject.blog .content {
