@@ -255,18 +255,15 @@ filepath {
     background-color: $white;
     //box-shadow: 0px 5px 5px $primary; //#888888;
     border-top: solid 1px $lightGrey;
-    border-right: solid 1px $lightGrey;
     border-bottom: solid 1px $lightGrey;
-    border-left: solid 1px $lightGrey;
-
     @media(min-width:767px) {
         margin-top: 100px;
         margin-bottom: 135px;
         padding-top: 100px;
         padding-bottom: 20px;
         width: 75%;
-        //margin-top: 125px;
-        //padding-top: 125px;
+        border-right: solid 1px $lightGrey;
+        border-left: solid 1px $lightGrey;
     }
     /* Added in { Personal } for responsive images in posts and section contents*/
     img {
