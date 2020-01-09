@@ -20,7 +20,7 @@ force-https: True
 #############
 lang: "en"
 author: "Jesse Allen"
-title: "UpstateIndie"
+title: "Upstate Indie"
 description: "UpstateIndie, LLC is an independent game development studio located in Upstate South Carolina."
 keywords: "upstate indie, upstateindie, upstateindie.com, games, pcgames, torque3d tutorials"
 favicon: "/img/favicon.ico"
