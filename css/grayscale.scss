@@ -62,7 +62,7 @@ p {
     font-size: 18px;
     line-height: 1.5;
     text-align: left;
-    @media only screen and (min-width: 768px) {
+    @media(min-width:768px) {
         margin: 0 0 35px;
         font-size: 20px;
         line-height: 1.6;
@@ -75,7 +75,7 @@ p {
     line-height: 1.5;
     text-align: center;
     word-wrap: break-word;
-    @media only screen and (min-width: 768px) {
+    @media(min-width:768px) {
         margin: 0 0 35px;
         font-size: 20px;
         line-height: 1.6;
@@ -89,7 +89,7 @@ p {
     line-height: 1.5;
     text-align: left;
     word-wrap: break-word;
-    @media only screen and (min-width: 768px) {
+    @media(min-width:768px) {
         margin: 0 0 35px;
         font-size: 20px;
         line-height: 1.6;
@@ -192,7 +192,7 @@ filepath {
             }
         }
     }
-    @media only screen and (min-width: 768px) {
+    @media(min-width:768px) {
         padding: 10;
         background: rgba($black, 0.7); //$greyPane; 
         border-bottom: 1px solid $black; //rgba($lightGrey, 0.7);        
@@ -250,7 +250,7 @@ filepath {
     margin-bottom: 135px;
     padding-top: 100px;
     padding-bottom: 20px;
-    width: 100%;
+    width: 75%;
     height: auto;
     background-color: $white;
     //box-shadow: 0px 5px 5px $primary; //#888888;
@@ -259,12 +259,13 @@ filepath {
     border-bottom: solid 1px $lightGrey;
     border-left: solid 1px $lightGrey;
 
-    @media only screen and (min-width: 768px) {
+    @media(min-width:767px) {
         margin-top: 100px;
         margin-bottom: 135px;
         padding-top: 100px;
         padding-bottom: 20px;        
-        //width: 75%;
+        //margin-top: 125px;
+        //padding-top: 125px;
     }
     /* Added in { Personal } for responsive images in posts and section contents*/
     img {
