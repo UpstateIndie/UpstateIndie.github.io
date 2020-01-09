@@ -192,7 +192,7 @@ filepath {
             }
         }
     }
-    @media(min-width:768px) {
+    @media only screen and (min-width: 768px) {
         padding: 10;
         background: rgba($black, 0.7); //$greyPane; 
         border-bottom: 1px solid $black; //rgba($lightGrey, 0.7);        
@@ -259,7 +259,7 @@ filepath {
     border-bottom: solid 1px $lightGrey;
     border-left: solid 1px $lightGrey;
 
-    @media(min-width:767px) {
+    @media only screen and (min-width: 768px) {
         margin-top: 100px;
         margin-bottom: 135px;
         padding-top: 100px;
