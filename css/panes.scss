@@ -135,11 +135,14 @@ sitemap:
   margin: 0% 0% 2.66% 0%;
   background: $white; //$greyPane;
   padding-top: 15px;
-  border: solid 1px $lightGrey;
-  box-shadow: 0px 2px 6px rgba($black, 0.25);
+  border-top: solid 1px $lightGrey;
+  border-bottom: solid 1px $lightGrey;
+  box-shadow: 0px 0px 6px rgba($black, 0.25);
   @media(min-width:768px) {
     margin: 0% 1.33% 2.66% 1.33%;
     padding: 15px;
+    border: solid 1px $lightGrey;
+    box-shadow: 0px 2px 6px rgba($black, 0.25);
   }
 }
 
