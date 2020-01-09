@@ -276,7 +276,7 @@ sitemap:
 }
 
 /*media queries for small devices*/
-@media screen and (max-width: 678px) {
+@media only screen and (max-width: 678px) {
   .main-area {
     width: 100%;
     margin: 0px 0px 0px 0px;
