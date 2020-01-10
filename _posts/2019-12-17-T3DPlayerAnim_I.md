@@ -7,9 +7,7 @@ tags: [ 'tutorials' ]
 ---
 
 <h3>DISCLAIMER</h3>
-<i>I am not responsible for anything you mess up with your project as a result of following this.
-<br><br>
-Throughout this tutorial I will refer to Torque3D MIT as Torque.
+<i>Throughout this tutorial I will refer to Torque3D MIT as Torque.
 <br><br>
 Not every feature that Torque has to offer is going to be covered in this first tutorial, and the ones that are covered can be expanded upon and implemented in other ways.
 <br><br>
@@ -17,7 +15,7 @@ This tutorial is for character animations as viewed in third person camera mode.
 <br><br>
 This is the first part in a series. Don't get the fire and pitchforks out until you've completed the entire series.
 <br><br>
-A base understanding of downloading the engine and installing it is a prerequisite to this.
+A base understanding of downloading the engine and installing it is a prerequisite to this. I am not responsible for anything you mess up with your project.
 <br><br>
 This tutorial is intended to be performed using the current release of Torque3D MIT(3.10.1) in its binary form. Version 4.0 is fast on the horizon, introducing a myriad of new features and additions, but we are going to keep it old school here and introduce those things as they are released. By binary I mean don't download and build Torque just grab the precompiled .exe(link below). I recommend a brand new download and we're just gonna take off right away with that. We're not worrying about customization, we are getting our Players running around and animated FAST.
 <br><br>
