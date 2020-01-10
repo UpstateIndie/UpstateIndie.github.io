@@ -110,59 +110,71 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <br><br>
 <b>5-</b> Open the file <b>art/datablocks/player.cs</b> and scroll down nearer the bottom to the Player datablock. The datablock holds information about our Player, and it starts off like this:<br>
 <br>
-<b>datablock PlayerData(DefaultPlayerData)<br>
-&#123;<br>
-&emsp;renderFirstPerson = false;<br>
-&emsp;firstPersonShadows = true;<br>
-&emsp;computeCRC = false;<br>
-<br>
-&emsp;// Third person shape<br>
-&emsp;shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";<br>
-&emsp;...<br>
-&#125;;</b><br>
+<pre><code class="cs">
+datablock PlayerData(DefaultPlayerData)
+{
+   renderFirstPerson = false;
+   firstPersonShadows = true;
+   computeCRC = false;
+
+   // Third person shape<br>
+   shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";
+   ...
+</code></pre>
 <br>
 <b>6-</b> Update the shapefile entry so that it points to your new <b>ybot.DAE</b> file like so:
 <br><br>
-<b>datablock PlayerData(DefaultPlayerData)<br>
-&#123;<br>
-&emsp;renderFirstPerson = false;<br>
-&emsp;firstPersonShadows = true;<br>
-&emsp;computeCRC = false;<br>
-<br>
-&emsp;// Third person shape<br>
-&emsp;// shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";<br>
-&emsp;shapeFile = "art/shapes/actors/ybot/ybot.DAE";<br>
-&emsp;...<br>
-&#125;;</b><br>
+<pre><code class="cs">
+datablock PlayerData(DefaultPlayerData)
+{
+   renderFirstPerson = false;
+   firstPersonShadows = true;
+   computeCRC = false;
+
+   // Third person shape<br>
+   //shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";
+   shapeFile = "art/shapes/actors/ybot/ybot.DAE";
+   ...
+</code></pre>
 <br>
 Notice that I just commented out the original soldier_rigged.DAE line and added a new one below it. By commenting, I mean that I placed <b>//</b> in front of that line so that Torque will ignore that line when executing this file. This way, if you ever want to reference the existing Soldier model in the future it's easy to just comment out your new line and uncomment the original one to go right back to the original Soldier.
 <br><br>
 <b>7-</b> Before we start up Torque we are going to make a small change to our spawn code so that we aren't in first person mode. Open the file <b>scripts/server/gameCore.cs</b> and search for the function:
 <br><br>
-<b>function GameCore::spawnPlayer(&#37;game, &#37;client, &#37;spawnPoint, &#37;noControl)<br>
-&#123;<br>
-&emsp;...<br>
-&#125;</b><br>
+<pre><code class="cs">
+function GameCore::spawnPlayer(%game, %client, %spawnPoint, %noControl)
+{
+   ...
+}
+</code></pre>
 <br>
 Within this function find where it says:
 <br><br>
-<b>&emsp;// Give the client control of the player<br>
-&emsp;%client.player = %player;</b><br>
+<pre><code class="cs">
+   // Give the client control of the player<br>
+   %client.player = %player;
+</code></pre>
 <br>
 Right below that line add this line:<br>
 <br>
-<b>&emsp;%client.setFirstPerson(false);</b><br>
+<pre><code class="cs">
+   %client.setFirstPerson(false);
+</code></pre>
 <br>
 <b>8-</b> Since we are already in the gameCore.cs file, we should go ahead and remove the existing loadout for the Player so that we don't have our character equipping weapons they aren't ready to use yet. In the same <b>scripts/server/gameCore.cs</b> file find the function:<br>
 <br>
-<b>function GameCore::preparePlayer(%game, %client)<br>
-&#123;
-&emsp;...<br>
-&#125;</b><br>
+<pre><code class="cs">
+function GameCore::preparePlayer(%game, %client)
+{
+   ...
+}
+</code></pre>
 <br>
 Find the line <b>%game.loadOut(%client.player)</b> inside that function and comment it out. Remember, commenting is just adding <b>//</b> in front of that line:<br>
 <br>
-<b>&emsp;//%game.loadOut(%client.player)</b><br>
+<pre><code class="cs">
+   //%game.loadOut(%client.player);
+</code></pre>
 <br>
 Now the Player won't try to equip weapons without the proper nodes in place.
 <br><br>
