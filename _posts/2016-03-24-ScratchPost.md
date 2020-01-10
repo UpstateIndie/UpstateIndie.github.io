@@ -16,7 +16,7 @@ void test(bool b, int i);
 </code></pre>
 <br>
 
-highlight.js library: cpp
+highlight.js library: cs
 <pre><code class="cs">
 // comment test
 %var = 0;
