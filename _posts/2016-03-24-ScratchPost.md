@@ -34,12 +34,14 @@ singleton TSShapeConstructor(YbotDAE)
 <br>
 
 rouge: cpp
+<br>
 {% highlight cpp %}
 void test(bool b, int i);
 {% endhighlight %}
 <br>
 
 rouge: cs
+<br>
 {% highlight cs %}
 singleton TSShapeConstructor(YbotDAE)
 {
