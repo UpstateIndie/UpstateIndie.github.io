@@ -20,8 +20,8 @@ class testClass
     Con::printf(str);
   }
 }
-{: #code-example-1}
 </code></pre>
+{: #code-example-1}
 <br>
 
 highlight.js library: cs
