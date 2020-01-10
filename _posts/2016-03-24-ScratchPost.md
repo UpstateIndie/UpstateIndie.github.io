@@ -26,8 +26,10 @@ class testClass
 
 highlight.js library: cs
 <pre><code class="cs">
-// comment test
-%var = 0;
+singleton TSShapeConstructor(YbotDAE)
+{
+ baseShape = “./ybot.DAE”;
+};
 </code></pre>
 <br>
 
@@ -39,8 +41,9 @@ void test(bool b, int i);
 
 rouge: cs
 {% highlight cs %}
-// comment test
-%var = 0;
-function testFunction(%bool, %int);
+singleton TSShapeConstructor(YbotDAE)
+{
+ baseShape = “./ybot.DAE”;
+};
 {% endhighlight %}
 <br>
