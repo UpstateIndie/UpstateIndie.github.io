@@ -17,7 +17,8 @@ I am not responsible for anything you mess up with your project as a result of f
 </i><br><br>
 
 <h3 text-align="center">INTRO</h3>
-Hello out there Torque people! Before I get too far into my beginner's series, I wanted to take a step back to talk about LOD(level of detail) for Mixamo characters. More specifically, how to do this using Blender. 
+Hello out there Torque people! Before I get too far into my beginner's series, I wanted to take a step back to talk about LOD(level of detail) for Mixamo characters. More specifically, how to do this using Blender.
+<br>
 <b>What You're Gonna Need:</b>
 <br>
 Torque3D MIT 3.10.1 BINARY: <a href="https://github.com/GarageGames/Torque3D/archive/v3.10.1.zip">Torque3D Binaries</a>
@@ -170,7 +171,7 @@ If you've created all of the duplicate versions of your model and applied the De
 <h3>Step 4: Mixamo Specifics</h3>
 The reason why it is important that we work with the <b>.fbx</b> format(even if we ultimately want to use .DAE) is we are about to upload this collection of LODs back to Mixamo for rigging. The mixamo rigger only accepts a few formats, and .DAE is not one of them.
 <br><br>
-<b>1-</b> Login to Mixamo and look to the top right of the screen. Under the Download button click the button <b>Upload Character</b>. A popup will appear where you can drag and drop your exported .fbx file. Go ahead and do that now and let Mixamo process it. Mixamo's Auto-Rigger interface will appear, and if all as well your stack of LODs should be displayed.
+<b>1-</b> Login to Mixamo and look to the top right of the screen. Under the Download button click the button <b>Upload Character</b>. A popup will appear where you can drag and drop your exported .fbx file. Go ahead and do that now and let Mixamo process it. Mixamo's Auto-Rigger interface will appear, and if all is well your stack of LODs should be displayed.
 
 <b>2-</b> Click Next to begin the auto-rigging process, it's pretty simple to use. You'll just drag the circles onto the correct joints as instructed, but to clear any confusion there is an image on the right side of the Auto-Rigger interface that shows what that should look like when complete. Mine looked like this:<br>
 <p>
