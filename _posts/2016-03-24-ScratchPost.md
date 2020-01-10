@@ -30,3 +30,4 @@ rouge: cs
 // comment test
 %var = 0;
 function testFunction(%bool, %int);
+{% endhighlight %}
