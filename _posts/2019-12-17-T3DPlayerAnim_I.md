@@ -236,41 +236,46 @@ Very cool! Now we are ready to plug in some animations!
 Now, let's get back to the TSShapeConstructor stuff. You might not realize it but just now when we changed the name of those nodes and clicked the save button, Torque automagically added a new ybot.cs file in the directory where your new model is located. Check in <b>art/shapes/actors/ybot/</b> and you should see a new <b>ybot.cs</b> file(or whatever your model is named). This is important for you to understand because right now we are going to use the power of that script. Rather than navigating through the Editor performing the same tasks over and over, we will just plug our animations into this script.
 <br><br>
 <b>1-</b> Go ahead and open the <b>art/shapes/actors/ybot.cs</b> file now. It should look like this:
-<br><br>
-<b>singleton TSShapeConstructor(YbotDAE)<br>
-&#123;<br>
-&emsp;baseShape = "./ybot.DAE";<br>
-&#125;;<br>
 <br>
-function YbotDAE::onLoad(%this)<br>
-&#123;<br>
-&emsp;%this.renameNode("mixamorig_RightEye", "EYE");<br>
-&emsp;%this.renameNode("mixamorig_HeadTop_End", "CAM");<br>
-&#125;</b><br>
+<pre><code class="cs">
+singleton TSShapeConstructor(YbotDAE)
+{
+   baseShape = "./ybot.DAE";
+};
+
+function YbotDAE::onLoad(%this)
+{
+   %this.renameNode("mixamorig_RightEye", "EYE");
+   %this.renameNode("mixamorig_HeadTop_End", "CAM");
+}
+</code></pre>
 <br>
 What's important to understand is that the <b>TSShapeConstructor</b> is being called from script in the first block to load the <b>./ybot.DAE</b> file. You'll notice that the baseShape has <b>./</b> in front of the ybot.DAE filename. All this means is that Torque is going to search in the same folder that the script is in to find this .DAE file.
 <br><br>
 <i>The second block of code will be executed any time this model is loaded up. So from here on out, even if you spawn in an AIPlayer using this same model, those nodes are going to be renamed by this script for you.</i>
 <br><br>
 <b>2-</b> Alright, let's get this animated already! <b>3, 2, 1, GO!</b> Here I'm going to provide the script for this to work, and then in Part II we'll cover how the TSShapeConstructor works using this script. Add the new lines from the script below so that it looks just like the example. You could even just copy this entire script and replace all of what's in yours:
-<br><br>
-<b>singleton TSShapeConstructor(YbotDAE)<br>
-&#123;<br>
-&emsp;baseShape = "./ybot.DAE";<br>
-&#125;;<br>
 <br>
-function YbotDAE::onLoad(%this)<br>
-&#123;<br>
-&emsp;%this.renameNode("mixamorig_LeftEye", "EYE");<br>
-&emsp;%this.renameNode("mixamorig_HeadTop_End", "CAM");<br>
-&emsp;%this.addSequence("./anims/PlayerAnim_Root.dae", "Root", "0", "-1", "1", "0");<br>
-&emsp;%this.addSequence("./anims/PlayerAnim_Run.dae", "Run", "0", "-1", "1", "0");<br>
-&emsp;%this.addSequence("./anims/PlayerAnim_Back.dae", "Back", "0", "-1", "1", "0");<br>
-&emsp;%this.addSequence("./anims/PlayerAnim_Sprint.dae", "Sprint_forward", "0", "-1", "1", "0");<br>
-&emsp;%this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_backward", "0", "-1", "1", "0");<br>
-&emsp;%this.addSequence("./anims/PlayerAnim_Side.dae", "Side", "0", "-1", "1", "0");<br>
-&emsp;%this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0");<br>
-&#125;</b><br>
+<pre><code class="cs">
+singleton TSShapeConstructor(YbotDAE)
+{
+   baseShape = "./ybot.DAE";
+};
+
+function YbotDAE::onLoad(%this)
+{
+   %this.renameNode("mixamorig_RightEye", "EYE");
+   %this.renameNode("mixamorig_HeadTop_End", "CAM");
+
+   %this.addSequence("./anims/PlayerAnim_Root.dae", "Root", "0", "-1", "1", "0");
+   %this.addSequence("./anims/PlayerAnim_Run.dae", "Run", "0", "-1", "1", "0");
+   %this.addSequence("./anims/PlayerAnim_Back.dae", "Back", "0", "-1", "1", "0");
+   %this.addSequence("./anims/PlayerAnim_Sprint.dae", "Sprint_forward", "0", "-1", "1", "0");
+   %this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_backward", "0", "-1", "1", "0");
+   %this.addSequence("./anims/PlayerAnim_Side.dae", "Side", "0", "-1", "1", "0");
+   %this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0");
+}
+</code></pre>
 <br>
 Save the script file and now when we launch Torque and start up a level we have an animated character playing its <b>Root</b> animation:
 <p>
