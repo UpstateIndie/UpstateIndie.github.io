@@ -42,12 +42,15 @@
 
 {% if site.syntax-highlight and page.section-type == "post" %}
 
+  <!-- Syntax highlighting linewrap fix -->
+
   <style type='text/css'>
   .hljs {
     white-space: pre;
     overflow-x: auto;
   }
   </style>
+
   <!-- Syntax highlight in post pages -->
 
   <script src="{{site.baseurl}}/js/highlight.min.js"></script>
