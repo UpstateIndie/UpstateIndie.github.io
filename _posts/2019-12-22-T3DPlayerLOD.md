@@ -147,7 +147,7 @@ With the object you want to LOD selected(1), click the Modifier tab(2), and then
   </div>
 </p><br>
 
-<b>3-</b> The Decimate modifier has a few different ways that it decreases polygons in a mesh. The two I use regularly are <b>Collapse</b> and <b>Un-Subdivide</b>. In the case of Collapse(1), use the <b>Ratio</b>(2) slider to decrease triangles. For Un-Subdivide(1), increase the number of <b>Iterations</b>(2) and Blender reduces the geometry down in steps. Just pay attention to the number of faces shown in the modifier interface and decrease the polygons for each LOD mesh you have created, then click <b>Apply</b>(3)<br>.
+<b>3-</b> The Decimate modifier has a few different ways that it decreases polygons in a mesh. The two I use regularly are <b>Collapse</b> and <b>Un-Subdivide</b>. In the case of Collapse(1), use the <b>Ratio</b>(2) slider to decrease triangles. For Un-Subdivide(1), increase the number of <b>Iterations</b>(2) and Blender reduces the geometry down in steps. Just pay attention to the number of faces shown in the modifier interface and decrease the polygons for each LOD mesh you have created, then click <b>Apply</b>(3).<br>
 <p>
   <div align="center">
   <img src="/img/blendLODstep3-3.PNG" height="218">
@@ -180,8 +180,7 @@ The reason why it is important that we work with the <b>.fbx</b> format(even if 
   </div>
 </p><br>
 
-<b>3-</b> Click Next when done, and allow the Auto-Rigger to do its magic. Within a couple minutes, you should be presented with an example idle animation hooked into your 
-model.<br>
+<b>3-</b> Click Next when done, and allow the Auto-Rigger to do its magic. Within a couple minutes, you should be presented with an example idle animation hooked into your model.<br>
 <p>
   <div align="center">
   <img src="/img/blendLODstep4-3.PNG" height="317">
