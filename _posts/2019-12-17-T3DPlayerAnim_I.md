@@ -109,7 +109,6 @@ Instead we are going to be using Torque's <b>TSShapeConstructor</b>. While I am 
 <b>4-</b> Move all of the renamed animation files into the <b>art/shapes/actors/ybot/Anims/</b> directory and the single ybot.zip file into the <b>art/shapes/actors/ybot/</b> directory. This structure is going to be important in a bit when we use the script to hook all this into Torque.
 <br><br>
 <b>5-</b> Open the file <b>art/datablocks/player.cs</b> and scroll down nearer the bottom to the Player datablock. The datablock holds information about our Player, and it starts off like this:<br>
-<br>
 <pre><code class="cs">
 datablock PlayerData(DefaultPlayerData)
 {
@@ -117,13 +116,13 @@ datablock PlayerData(DefaultPlayerData)
    firstPersonShadows = true;
    computeCRC = false;
 
-   // Third person shape<br>
+   // Third person shape
    shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";
    ...
 </code></pre>
 <br>
 <b>6-</b> Update the shapefile entry so that it points to your new <b>ybot.DAE</b> file like so:
-<br><br>
+<br>
 <pre><code class="cs">
 datablock PlayerData(DefaultPlayerData)
 {
@@ -131,7 +130,7 @@ datablock PlayerData(DefaultPlayerData)
    firstPersonShadows = true;
    computeCRC = false;
 
-   // Third person shape<br>
+   // Third person shape
    //shapeFile = "art/shapes/actors/Soldier/soldier_rigged.DAE";
    shapeFile = "art/shapes/actors/ybot/ybot.DAE";
    ...
@@ -140,7 +139,7 @@ datablock PlayerData(DefaultPlayerData)
 Notice that I just commented out the original soldier_rigged.DAE line and added a new one below it. By commenting, I mean that I placed <b>//</b> in front of that line so that Torque will ignore that line when executing this file. This way, if you ever want to reference the existing Soldier model in the future it's easy to just comment out your new line and uncomment the original one to go right back to the original Soldier.
 <br><br>
 <b>7-</b> Before we start up Torque we are going to make a small change to our spawn code so that we aren't in first person mode. Open the file <b>scripts/server/gameCore.cs</b> and search for the function:
-<br><br>
+<br>
 <pre><code class="cs">
 function GameCore::spawnPlayer(%game, %client, %spawnPoint, %noControl)
 {
@@ -149,14 +148,13 @@ function GameCore::spawnPlayer(%game, %client, %spawnPoint, %noControl)
 </code></pre>
 <br>
 Within this function find where it says:
-<br><br>
+<br>
 <pre><code class="cs">
-   // Give the client control of the player<br>
+   // Give the client control of the player
    %client.player = %player;
 </code></pre>
 <br>
 Right below that line add this line:<br>
-<br>
 <pre><code class="cs">
    %client.setFirstPerson(false);
 </code></pre>
