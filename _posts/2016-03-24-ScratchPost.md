@@ -12,7 +12,14 @@ This is our 'Scratching Post'. Here we just post up snippets of test code for th
 <br>
 highlight.js library: cpp
 <pre><code class="cpp">
-void test(bool b, int i);
+class testClass
+{
+  public static void test(String args[])
+  {
+    String str = "";
+    Con::printf(str);
+  }
+}
 </code></pre>
 <br>
 
