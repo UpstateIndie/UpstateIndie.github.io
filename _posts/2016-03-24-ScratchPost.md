@@ -7,3 +7,14 @@ tags: [ 'tech' ]
 ---
 
 This is our 'Scratching Post'. Here we just post up snippets of test code for the blog. If things on this post look weird, it's probably because we're in the process of testing new content here.
+
+Syntax Highlighting Tests:
+
+<pre><code class="cpp">
+void testSyntax(bool b, int i);
+</code></pre>
+
+<pre><code class="cs">
+// comment test
+%var = 0;
+</code></pre>
