@@ -361,17 +361,19 @@ footer {
     }
 }
 
+/* Uncomment to add styling to selected text:
 ::-moz-selection {
-    //text-shadow: none;
+    text-shadow: none;
     background: #fcfcfc;
     background: rgba($lightGrey, 0.2);
 }
 
 ::selection {
-    //text-shadow: none;
+    text-shadow: none;
     background: #fcfcfc;
     background: rgba($lightGrey, 0.2);
 }
+*/
 
 img::selection {
     background: transparent;
