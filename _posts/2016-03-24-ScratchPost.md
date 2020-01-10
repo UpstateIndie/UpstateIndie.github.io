@@ -20,6 +20,7 @@ class testClass
     Con::printf(str);
   }
 }
+{: #code-example-1}
 </code></pre>
 <br>
 
