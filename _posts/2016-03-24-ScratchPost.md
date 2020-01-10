@@ -14,11 +14,11 @@ highlight.js library: cpp
 <pre><code class="cpp">
 class testClass
 {
-  public static void test(String args[])
-  {
-    String str = "";
-    Con::printf(str);
-  }
+   public static void test(String args[])
+   {
+      String str = "";
+      Con::printf(str);
+   }
 }
 </code></pre>
 {: #code-example-1}
@@ -28,7 +28,7 @@ highlight.js library: cs
 <pre><code class="cs">
 singleton TSShapeConstructor(YbotDAE)
 {
- baseShape = “./ybot.DAE”;
+   baseShape = “./ybot.DAE”;
 };
 </code></pre>
 <br>
@@ -43,7 +43,7 @@ rouge: cs
 {% highlight cs %}
 singleton TSShapeConstructor(YbotDAE)
 {
- baseShape = “./ybot.DAE”;
+   baseShape = “./ybot.DAE”;
 };
 {% endhighlight %}
 <br>
