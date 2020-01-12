@@ -238,7 +238,7 @@ In Part I we implemented all of the available animations for the Standing pose, 
 <b>Crouch_Right:</b> Type Crouch Walk Right in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Walk Right and Torque calls this animation <b>Crouch_Right</b>.<br><br>
 <b>2-</b> Extract all of the .zip animation files into the <b>art/shapes/actors/ybot/Anims/</b> directory(replacing 'ybot' with your model's name if necessary).
 <br><br>
-<b>2-</b> As before, we are going to add these new animations to our model using the <b>TSStaticShapeConstructor</b> in script. Open your <b>art/shapes/actors/ybot.cs</b> file and update it with the new animations, like so:<br>
+<b>3-</b> As before, we are going to add these new animations to our model using the <b>TSStaticShapeConstructor</b> in script. Open your <b>art/shapes/actors/ybot.cs</b> file and update it with the new animations, like so:<br>
 <pre><code class="cs">
 singleton TSShapeConstructor(YbotDAE)
 {
