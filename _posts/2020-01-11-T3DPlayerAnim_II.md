@@ -6,7 +6,7 @@ category: tutorials
 tags: [ 'tutorials' ]
 ---
 
-Welcome back to the FUN side of Torque! In <a href="https://www.upstateindie.com/tutorials/2019/12/17/T3DPlayerAnim_I.html">Part I</a> we added the TPose(root/idle) and basic character movement to our Player. At the end of this tutorial, we'll have a mixamo character with more fluid input controls and additional movement states. Here we'll go over some fundamentals about Torque's input triggers and movement states,  as well as how these things affect animations seen in Torque3D games.
+Welcome back to the FUN side of Torque! In <a href="https://www.upstateindie.com/tutorials/2019/12/17/T3DPlayerAnim_I.html">Part I</a> we added the TPose(root/idle) and basic character movement to our Player. At the end of this tutorial, we'll have a mixamo character with more fluid input controls and additional movement states. Here we'll go over some fundamentals about Torque's input triggers and movement states,  as well as how these things affect animations seen in Torque3D games.<br><br>
 <i>
 Throughout this tutorial I refer to Torque3D MIT as Torque.
 <br><br>
