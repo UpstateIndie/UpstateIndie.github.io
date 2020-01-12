@@ -81,13 +81,13 @@ We need an animation for each action the Player is going to perform. Right now, 
 <br><br>
 <b>Back:</b> Type Walking Backward in the search bar and pick an animation to download. Remember that mixamo calls this animation Walking Backward and Torque calls this animation Back. Extract the animation file and rename it <b>PlayerAnim_Back.DAE</b>.
 <br><br>
-<b>Sprint_forward:</b> Type Running in the search bar and pick an animation to download. Remember that mixamo calls this animation Running and Torque calls this animation Sprint_forward. Extract the animation file and rename it <b>PlayerAnim_Sprint_forward.DAE</b>.
+<b>Sprint_Forward:</b> Type Running in the search bar and pick an animation to download. Remember that mixamo calls this animation Running and Torque calls this animation Sprint_Forward. Extract the animation file and rename it <b>PlayerAnim_Sprint_forward.DAE</b>.
 <br><br>
-<b>Sprint_backward:</b> Type Running Backward in the search bar and pick an animation to download. Remember that mixamo calls this animation Running Backward and Torque calls this animation Sprint_backward. Extract the animation file and rename it <b>PlayerAnim_Sprint_backward.DAE</b>.
+<b>Sprint_Backward:</b> Type Running Backward in the search bar and pick an animation to download. Remember that mixamo calls this animation Running Backward and Torque calls this animation Sprint_Backward. Extract the animation file and rename it <b>PlayerAnim_Sprint_backward.DAE</b>.
 <br><br>
-<b>Side:</b> Type Left Strafe in the search bar and pick an animation to download. Remember that mixamo calls this animation Left Strafe Walking(or similar) and Torque calls this animation Side. It is important to note that Side is strafing to the left. Extract the animation file and rename it <b>PlayerAnim_Side.DAE</b>.
+<b>Side:</b> Type Left Strafe Walking in the search bar and pick an animation to download. Remember that mixamo calls this animation Left Strafe Walking(or similar) and Torque calls this animation Side. It is important to note that Side is strafing to the left. Extract the animation file and rename it <b>PlayerAnim_Side.DAE</b>.
 <br><br>
-<b>Side_Right:</b> Type Right Strafe in the search bar and pick an animation to download. Remember that mixamo calls this animation Right Strafe Walking(or similar) and Torque calls this animation Side_Right. Extract the animation file and rename it <b>PlayerAnim_Side_Right.DAE</b>.
+<b>Side_Right:</b> Type Right Strafe Walking in the search bar and pick an animation to download. Remember that mixamo calls this animation Right Strafe Walking(or similar) and Torque calls this animation Side_Right. Extract the animation file and rename it <b>PlayerAnim_Side_Right.DAE</b>.
 <br><br>
 To note here is that each animation has been renamed with the <b>PlayerAnim_</b> prefix. This isn't completely necessary, but it can be useful later on. Also the names of the actions are renamed from mixamo names to fit with Torque naming conventions.
 <br><br>
@@ -270,8 +270,8 @@ function YbotDAE::onLoad(%this)
    %this.addSequence("./anims/PlayerAnim_Root.dae", "Root", "0", "-1", "1", "0");
    %this.addSequence("./anims/PlayerAnim_Run.dae", "Run", "0", "-1", "1", "0");
    %this.addSequence("./anims/PlayerAnim_Back.dae", "Back", "0", "-1", "1", "0");
-   %this.addSequence("./anims/PlayerAnim_Sprint.dae", "Sprint_forward", "0", "-1", "1", "0");
-   %this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_backward", "0", "-1", "1", "0");
+   %this.addSequence("./anims/PlayerAnim_Sprint.dae", "Sprint_Forward", "0", "-1", "1", "0");
+   %this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_Backward", "0", "-1", "1", "0");
    %this.addSequence("./anims/PlayerAnim_Side.dae", "Side", "0", "-1", "1", "0");
    %this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0");
 }
