@@ -207,22 +207,35 @@ What's occurring here is the <b>$mvTriggerCount5</b> variable is being increment
 You probably noticed right away that <b>$mvTriggerCount4</b> is missing. This movement trigger is used for the <b>prone</b> pose(i.e. lying on the ground). The trigger 0 doesn't actually change the Player's pose like the others, but just as importantly tells the Player object to 'fire. The trigger 1 signals to the Player to either 'jet', 'altfire', or 'fire a weapon in mount slot 1'. Using the default Soldier in Torque jetting is disabled, no weapons are setup to use an altfire, and no weapons are mounted to mount slot 1. This being the case, it can be a little unintuitive at first to use right click($mvTriggerCount1) for Player input. We'll get more into this later on when we explore weapons and firing them. For now, the main takeaway is that we understand these movement triggers are being turned on or off in order to tell the Player class it needs to do something. <br><br>
 <h3>Animations</h3>
 Okay, let's get back to poses and how they affect Player animations. Here is a list of the poses available to the default Player class:<br>
-<b>Standing : </b>While in this pose, the Player plays the <b>Root, Run, Back, Side,</b> and <b>Side_Right</b> animations.<br>
-<b>Sprinting : </b>While in this pose, the Player plays the <b>Sprint_Root, Sprint_Forward, Sprint_Backward, Sprint_Side,</b> and <b>Sprint_Right</b> animations.<br>
-<b>Crouching: </b>While in this pose, the Player plays the <b>Crouch_Root, Crouch_Forward, Crouch_Backward, Crouch_Side,</b> and <b>Crouch_Right</b> animations.<br>
-<b>Prone: </b>While in this pose, the Player plays the <b>Prone_Root, Prone_Forward,</b> and <b>Prone_Backward</b>animations.<br>
-<b>Swimming: </b>While in this pose, the Player plays the <b>Swim_Root, Swim_Forward, Swim_Backward, Swim_Left,</b> and <b>Swim_Right</b> animations.<br>
+<b>Standing : </b>While in this pose, the Player plays the <b>Root, Run, Back, Side,</b> and <b>Side_Right</b> animations.
+<br><br>
+<b>Sprinting : </b>While in this pose, the Player plays the <b>Sprint_Root, Sprint_Forward, Sprint_Backward, Sprint_Side,</b> and <b>Sprint_Right</b> animations.
+<br><br>
+<b>Crouching: </b>While in this pose, the Player plays the <b>Crouch_Root, Crouch_Forward, Crouch_Backward, Crouch_Side,</b> and <b>Crouch_Right</b> animations.
+<br><br>
+<b>Prone: </b>While in this pose, the Player plays the <b>Prone_Root, Prone_Forward,</b> and <b>Prone_Backward</b>animations.
+<br><br>
+<b>Swimming: </b>While in this pose, the Player plays the <b>Swim_Root, Swim_Forward, Swim_Backward, Swim_Left,</b> and <b>Swim_Right</b> animations.
+<br><br>
 In Part I we implemented all of the available animations for the Standing pose, but only 2 animations for moving forward or backward in the Sprinting pose. The Sprint_Root animation is useful if you want a 'root' animation to blend with the other animations in the Sprinting pose. For example, if the Player needs to hold a weapon differently while sprinting. We won't be using this animation presently but it is good to know that it is available. If the Sprint_Side/Sprint_Right animations are missing Torque will play the standard Side or Side_Right animations instead, just a bit faster. This usually ends up visually looking 'okay', but since we have a library of mixamo animations at our disposal we could download a couple new Sprint_Side and Sprint_Right animations. While we are there, we may as well also grab a set of animations for our Crouching pose.<br><br>
 <b>1-</b> Go ahead and login to your mixamo account and grab the animations for the actions listed below. Be sure to download them in the .DAE format.<br><br>
-<b>Sprint_Side:</b> Type Left Strafe in the search bar and pick an animation to download. Remember that mixamo calls this animation Left Strafe and Torque calls this animation <b>Sprint_Side</b>. Extract the animation file and rename it <b>PlayerAnim_Sprint_Side.DAE</b>.<br>
-<b>Sprint_Right:</b> Type Right Strafe in the search bar and pick an animation to download. Remember that mixamo calls this animation Right Strafe and Torque calls this animation <b>Sprint_Right</b>. Extract the animation file and rename it <b>PlayerAnim_Sprint_Right.DAE</b>.<br>
-<i>Mixamo offers a variety of similarly named strafe actions, so it is important that you distinguish between a standard strafe(i.e. PlayerAnim_Side) and a sprinting strafe(i.e. PlayerAnim_Sprint_Side). I ended up using mixamo's 'Left Strafe Walking/Right Strafe Walking' animations for regular strafing and similarly named 'Left Strafe/Right Strafe' animations for strafing in the Sprinting pose. Alternatively, there is a 'Strafe' animation that fits well for sprinting. Practice makes perfect, and as you become more familiar with mixamo's and Torque's naming conventions this process of choosing animations grows easier.</i><br>
-<b>Crouch_Root:</b> Type Crouch Idle in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Idle and Torque calls this animation <b>Crouch_Root</b>. Extract the animation file and rename it <b>PlayerAnim_Crouch_Root.DAE</b>.<br>
-<b>Crouch_Forward:</b> Type Crouch Walk Forward  in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Walk Forward  and Torque calls this animation <b>Crouch_Forward</b>. Extract the animation file and rename it <b>PlayerAnim_Crouch_Forward.DAE</b>.<br>
-<b>Crouch_Backward:</b> Type Crouch Walk Back in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Walk Back and Torque calls this animation <b>Crouch_Backward</b>. Extract the animation file and rename it <b>PlayerAnim_Crouch_Backward.DAE</b>.<br>
-<b>Crouch_Side:</b> Type Crouch Walk Left in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Walk Left and Torque calls this animation <b>Crouch_Side</b>. Extract the animation file and rename it <b>PlayerAnim_Crouch_Side.DAE</b>.<br>
+<b>Sprint_Side:</b> Type Left Strafe in the search bar and pick an animation to download. Remember that mixamo calls this animation Left Strafe and Torque calls this animation <b>Sprint_Side</b>. Extract the animation file and rename it <b>PlayerAnim_Sprint_Side.DAE</b>.
+<br><br>
+<b>Sprint_Right:</b> Type Right Strafe in the search bar and pick an animation to download. Remember that mixamo calls this animation Right Strafe and Torque calls this animation <b>Sprint_Right</b>. Extract the animation file and rename it <b>PlayerAnim_Sprint_Right.DAE</b>.
+<br><br>
+<i>Mixamo offers a variety of similarly named strafe actions, so it is important that you distinguish between a standard strafe(i.e. PlayerAnim_Side) and a sprinting strafe(i.e. PlayerAnim_Sprint_Side). I ended up using mixamo's 'Left Strafe Walking/Right Strafe Walking' animations for regular strafing and similarly named 'Left Strafe/Right Strafe' animations for strafing in the Sprinting pose. Alternatively, there is a 'Strafe' animation that fits well for sprinting. Practice makes perfect, and as you become more familiar with mixamo's and Torque's naming conventions this process of choosing animations grows easier.</i>
+<br><br>
+<b>Crouch_Root:</b> Type Crouch Idle in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Idle and Torque calls this animation <b>Crouch_Root</b>. Extract the animation file and rename it <b>PlayerAnim_Crouch_Root.DAE</b>.
+<br><br>
+<b>Crouch_Forward:</b> Type Crouch Walk Forward  in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Walk Forward  and Torque calls this animation <b>Crouch_Forward</b>. Extract the animation file and rename it <b>PlayerAnim_Crouch_Forward.DAE</b>.
+<br><br>
+<b>Crouch_Backward:</b> Type Crouch Walk Back in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Walk Back and Torque calls this animation <b>Crouch_Backward</b>. Extract the animation file and rename it <b>PlayerAnim_Crouch_Backward.DAE</b>.
+<br><br>
+<b>Crouch_Side:</b> Type Crouch Walk Left in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Walk Left and Torque calls this animation <b>Crouch_Side</b>. Extract the animation file and rename it <b>PlayerAnim_Crouch_Side.DAE</b>.
+<br><br>
 <b>Crouch_Right:</b> Type Crouch Walk Right in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Walk Right and Torque calls this animation <b>Crouch_Right</b>.<br><br>
-<b>2-</b> Extract all of the .zip animation files into the <b>art/shapes/actors/ybot/Anims/</b> directory(replacing 'ybot' with your model's name if necessary).<br><br>
+<b>2-</b> Extract all of the .zip animation files into the <b>art/shapes/actors/ybot/Anims/</b> directory(replacing 'ybot' with your model's name if necessary).
+<br><br>
 <b>2-</b> As before, we are going to add these new animations to our model using the <b>TSStaticShapeConstructor</b> in script. Open your <b>art/shapes/actors/ybot.cs</b> file and update it with the new animations, like so:<br>
 <pre><code class="cs">
 singleton TSShapeConstructor(YbotDAE)
