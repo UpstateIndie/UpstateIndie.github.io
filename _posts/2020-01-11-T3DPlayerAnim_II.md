@@ -270,11 +270,15 @@ function YbotDAE::onLoad(%this)
 Save the script file and now when we launch a level our Player will use all of the new animations we've added. Remember that holding 'left shift' will activate the Sprinting pose, so if we move left or right while holding this key our new Sprint_Side or Sprint_Right animations will be played. Additionally, since we've added some animations for the Crouching pose we can now switch to that pose by holding down the 'left control' key. As long as this key is held down, the Player object will be in its Crouching pose and all of its Crouch animations can be played while moving.<br><br>
 <h3>Conclusion</h3>
 This concludes Part II of our Torque3D Player Animation series. Let's recap. Here we've formed a better understanding of how user input is passed on to the Player class. We've also expanded our knowledge of Torque's pose system, which is used to control a wide range of animations for Player objects. Here are some main points to remember:<br><br>
-<b>1-</b> By use of <b>movement triggers</b> and a <b>moveMap</b>, we can create functions in script that will accept input and affect the Player object's pose.<br>
-<b>2-</b> An important thing to remember is to be sure that each movemap binding is calling a function which toggles the correct movement trigger(i.e. $mvTriggerCount0, etc.).<br>
-<b>3-</b> To implement additional poses for our Player, we can use the <b>TSStaticShapeConstructor</b> in script to hook in new animations.<br>
-<b>4-</b> An important thing to remember about poses is to be sure the animation names use the correct prefixes, both in script and when naming the animation file. To add an animation that allows the Player to move forward while prone, for example,  we'd name our animation file <b>PlayerAnim_Prone_Forward</b>.<br><br>
-<i>Recommended reading:</i> (TODO: additional links to docs) <--------------------------
+<b>1-</b> By use of <b>movement triggers</b> and a <b>moveMap</b>, we can create functions in script that will accept input and affect the Player object's pose.
+<br><br>
+<b>2-</b> An important thing to remember is to be sure that each movemap binding is calling a function which toggles the correct movement trigger(i.e. $mvTriggerCount0, etc.).
+<br><br>
+<b>3-</b> To implement additional poses for our Player, we can use the <b>TSStaticShapeConstructor</b> in script to hook in new animations.
+<br><br>
+<b>4-</b> An important thing to remember about poses is to be sure the animation names use the correct prefixes, both in script and when naming the animation file. To add an animation that allows the Player to move forward while prone, for example,  we'd name our animation file <b>PlayerAnim_Prone_Forward</b>.
+<br><br>
+<i>Recommended reading:</i> <a href="https://torque-3d.readthedocs.io/en/latest/script/input.html" target="_blank">Read the docs about Input</a>
 <br><br>
 Thanks for joining me on this journey of Torque learning! You might have noticed that there is no pose for jumping. In Part III we will be discussing and implementing Player jumping, as well as covering additional Player functionality in greater detail. Keep Torque-ing! <br><br>
 Torque3D is Copyright &copy; 2012 GarageGames, LLC
