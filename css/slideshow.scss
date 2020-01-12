@@ -16,7 +16,7 @@ sitemap:
 }
 .cb-slideshow:after { 
     content: '';
-    /*background: transparent url(../images/pattern.png) repeat top left; */
+    background: transparent url("/img/wowLogo.png") repeat top left;
 }
 
 
@@ -63,7 +63,7 @@ sitemap:
     animation-delay: 6s;
 }
 .cb-slideshow li:nth-child(3) span {
-    background-image: url("/img/ybotStanding.png");
+    background-image: url("/img/ybotStanding.PNG");
     animation-delay: 12s; 
 }
 .cb-slideshow li:nth-child(4) span { 
