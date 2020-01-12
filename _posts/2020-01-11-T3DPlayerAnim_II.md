@@ -273,5 +273,6 @@ This concludes Part II of our Torque3D Player Animation series. Let's recap. Her
 <b>3-</b> To implement additional poses for our Player, we can use the <b>TSStaticShapeConstructor</b> in script to hook in new animations.<br>
 <b>4-</b> An important thing to remember about poses is to be sure the animation names use the correct prefixes, both in script and when naming the animation file. To add an animation that allows the Player to move forward while prone, for example,  we'd name our animation file <b>PlayerAnim_Prone_Forward</b>.<br><br>
 <i>Recommended reading:</i> (TODO: additional links to docs) <--------------------------
+<br><br>
 Thanks for joining me on this journey of Torque learning! You might have noticed that there is no pose for jumping. In Part III we will be discussing and implementing Player jumping, as well as covering additional Player functionality in greater detail. Keep Torque-ing! <br><br>
 Torque3D is Copyright &copy; 2012 GarageGames, LLC
