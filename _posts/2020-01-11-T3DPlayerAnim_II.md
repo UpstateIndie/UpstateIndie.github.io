@@ -215,7 +215,7 @@ Okay, let's get back to poses and how they affect Player animations. Here is a l
 <br><br>
 <b>Crouching: </b>While in this pose, the Player plays the <b>Crouch_Root, Crouch_Forward, Crouch_Backward, Crouch_Side,</b> and <b>Crouch_Right</b> animations.
 <br><br>
-<b>Prone: </b>While in this pose, the Player plays the <b>Prone_Root, Prone_Forward,</b> and <b>Prone_Backward</b>animations.
+<b>Prone: </b>While in this pose, the Player plays the <b>Prone_Root, Prone_Forward,</b> and <b>Prone_Backward</b> animations.
 <br><br>
 <b>Swimming: </b>While in this pose, the Player plays the <b>Swim_Root, Swim_Forward, Swim_Backward, Swim_Left,</b> and <b>Swim_Right</b> animations.
 <br><br>
@@ -236,7 +236,7 @@ In Part I we implemented all of the available animations for the Standing pose, 
 <b>Crouch_Side:</b> Type Crouch Walk Left in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Walk Left and Torque calls this animation <b>Crouch_Side</b>. Extract the animation file and rename it <b>PlayerAnim_Crouch_Side.DAE</b>.
 <br><br>
 <b>Crouch_Right:</b> Type Crouch Walk Right in the search bar and pick an animation to download. Remember that mixamo calls this animation Crouch Walk Right and Torque calls this animation <b>Crouch_Right</b>.<br><br>
-<b>2-</b> Extract all of the .zip animation files into the <b>art/shapes/actors/ybot/Anims/</b> directory(replacing 'ybot' with your model's name if necessary).
+<b>2-</b> After extracting all of the .zip animation files and renaming them, move them into the <b>art/shapes/actors/ybot/Anims/</b> directory(replacing 'ybot' with your model's name if necessary).
 <br><br>
 <b>3-</b> As before, we are going to add these new animations to our model using the <b>TSStaticShapeConstructor</b> in script. Open your <b>art/shapes/actors/ybot.cs</b> file and update it with the new animations, like so:<br>
 <pre><code class="cs">
@@ -254,8 +254,8 @@ function YbotDAE::onLoad(%this)
    %this.addSequence("./anims/PlayerAnim_Back.dae", "Back", "0", "-1", "1", "0");
    %this.addSequence("./anims/PlayerAnim_Side.dae", "Side", "0", "-1", "1", "0");
    %this.addSequence("./anims/PlayerAnim_Side_Right.dae", "Side_Right", "0", "-1", "1", "0");
-   %this.addSequence("./anims/PlayerAnim_Sprint.dae", "Sprint_forward", "0", "-1", "1", "0");
-   %this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_backward", "0", "-1", "1", "0");
+   %this.addSequence("./anims/PlayerAnim_Sprint.dae", "Sprint_Forward", "0", "-1", "1", "0");
+   %this.addSequence("./anims/PlayerAnim_Sprint_Back.dae", "Sprint_Backward", "0", "-1", "1", "0");
    %this.addSequence("./anims/PlayerAnim_Sprint_Side.dae", "Sprint_Side", "0", "-1", "1", "0");
    %this.addSequence("./anims/PlayerAnim_Sprint_Right.dae", "Sprint_Right", "0", "-1", "1", "0");
    %this.addSequence("./anims/PlayerAnim_Crouch_Root.dae", "Crouch_Root", "0", "-1", "1", "0");
