@@ -63,7 +63,7 @@ Important here are the variables $movementSpeed, $mvLeftAction, $mvRightAction, 
 The <b>%val</b> variable is input as 1 when a key is pressed and 0 when a key is released, so '%val * $movementSpeed' above is always either 0(not moving) or 1 * $movementSpeed(moving at the speed set by $movementSpeed). The $movementSpeed variable is set in the same file just above movement functions <br><br>
 Sweet, so that's fairly simple. However, this default control scheme does have a couple flaws that cause the Player to sort of glide across the ground while holding multiple keys. One example of this is that if you hold down the 'w' and 'd' keys down at the same time, the Player will play a movement animation but glide across the ground in an unsightly way. Basically the diagonal movement looks wierd, so let's go ahead and fix that now. Copy this script into the <b>scripts/client/default.bind.cs</b> file, replacing the existing movement functions:
 <br><br>
-<b>Third Person Movement</b><br>
+<b>Third Person Input</b><br>
 <pre><code class="cs">
 function moveleft(%val)
 {
