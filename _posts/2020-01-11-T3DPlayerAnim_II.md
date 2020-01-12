@@ -265,7 +265,7 @@ function YbotDAE::onLoad(%this)
 }
 </code></pre><br>
 <i>Note that in this script I opted to not add a Crouch_Right animation. As I've pointed out in the comment above, excluding this animation will automatically play the Crouch_Side animation in reverse. If the Player is in Crouch pose and moving left, then right, or vice versa...using the same animation in reverse can appear smoother. This is all subjective and ultimately each project's needs can greatly differ. Try out different animations, experiment, get creative. Have fun with tinkering here!</i>
-<br>
+<br><br>
 Save the script file and now when we launch a level our Player will use all of the new animations we've added. Remember that holding 'left shift' will activate the Sprinting pose, so if we move left or right while holding this key our new Sprint_Side or Sprint_Right animations will be played. Additionally, since we've added some animations for the Crouching pose we can now switch to that pose by holding down the 'left control' key. As long as this key is held down, the Player object will be in its Crouching pose and all of its Crouch animations can be played while moving.<br><br>
 <h3>Conclusion</h3>
 This concludes Part II of our Torque3D Player Animation series. Let's recap. Here we've formed a better understanding of how user input is passed on to the Player class. We've also expanded our knowledge of Torque's pose system, which is used to control a wide range of animations for Player objects. Here are some main points to remember:<br><br>
