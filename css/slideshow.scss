@@ -6,7 +6,8 @@ sitemap:
 
 
 .cb-slideshow,
-.cb-slideshow:after { 
+.cb-slideshow:after {
+    list-style-type: none;
     position: fixed;
     width: 100%;
     height: 100%;
