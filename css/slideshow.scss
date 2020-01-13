@@ -96,7 +96,7 @@ sitemap:
     animation-delay: 30s; 
 }
 
-/*@keyframes imageAnimation { 
+@keyframes imageAnimation { 
     0% { opacity: 0; animation-timing-function: ease-in; }
     8% { opacity: 1; animation-timing-function: ease-out; }
     17% { opacity: 1 }
@@ -104,7 +104,7 @@ sitemap:
     100% { opacity: 0 }
 }
 
-@keyframes titleAnimation { 
+/*@keyframes titleAnimation { 
     0% { opacity: 0 }
     8% { opacity: 1 }
     17% { opacity: 1 }
@@ -113,7 +113,9 @@ sitemap:
 }*/
 
 /* ALT ANIMATIONS */
-@keyframes imageAnimation { 
+
+/* Zoom and rotate */
+/*@keyframes imageAnimation { 
 	0% {
 	    opacity: 0;
 	    animation-timing-function: ease-in;
@@ -132,8 +134,9 @@ sitemap:
 	    transform: scale(1.1) rotate(3deg);
 	}
 	100% { opacity: 0 }
-}
+}*/
 
+/* Drift Title left */
 @keyframes titleAnimation { 
 	0% {
 	    opacity: 0;
