@@ -16,7 +16,7 @@ sitemap:
 }
 .cb-slideshow:after { 
     content: '';
-    background: transparent url("/img/wowLogo.png") repeat top left;
+    /*background: transparent url("/img/wowLogo.png") repeat top left;*/
 }
 
 
@@ -123,3 +123,45 @@ sitemap:
     .cb-slideshow li div h3 { font-size: 80px }
 }
 
+/* ALT ANIMATIONS */
+/*@keyframes imageAnimation { 
+	0% {
+	    opacity: 0;
+	    animation-timing-function: ease-in;
+	}
+	8% {
+	    opacity: 1;
+	    transform: scale(1.05);
+	    animation-timing-function: ease-out;
+	}
+	17% {
+	    opacity: 1;
+	    transform: scale(1.1) rotate(3deg);
+	}
+	25% {
+	    opacity: 0;
+	    transform: scale(1.1) rotate(3deg);
+	}
+	100% { opacity: 0 }
+}
+
+@keyframes titleAnimation { 
+	0% {
+	    opacity: 0;
+	    transform: translateX(200px);
+	}
+	8% {
+	    opacity: 1;
+	    transform: translateX(0px);
+	}
+	17% {
+	    opacity: 1;
+	    transform: translateX(0px);
+	}
+	19% {
+	    opacity: 0;
+	    transform: translateX(-400px);
+	}
+	25% { opacity: 0 }
+	100% { opacity: 0 }
+}*/
