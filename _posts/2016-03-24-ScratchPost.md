@@ -7,12 +7,12 @@ tags: [ 'tech' ]
 ---
 
 This is our 'Scratching Post'. Here we just post up snippets of test code for the blog. If things on this post look weird, it's probably because we're in the process of testing new content here.
-<!--
+
 <ul class="cb-slideshow">
 	<li>
 		<span>Image 01</span>
 		<div>
-			<h3>Forest</h3>
+			<h3>Terrain</h3>
 		</div>
 	</li>
 	<li>
@@ -24,26 +24,26 @@ This is our 'Scratching Post'. Here we just post up snippets of test code for th
 	<li>
 		<span>Image 03</span>
 		<div>
-			<h3>Forest</h3>
+			<h3>Tutorials</h3>
 		</div>
 	</li>
  	<li>
 		<span>Image 04</span>
 		<div>
-			<h3>Forest</h3>
+			<h3>Resources</h3>
 		</div>
 	</li>
 	<li>
 		<span>Image 05</span>
 		<div>
-			<h3>Forest</h3>
+			<h3>Testing</h3>
 		</div>
 	</li>
   	<li>
 		<span>Image 06</span>
 		<div>
-			<h3>Forest</h3>
+			<h3>Animation</h3>
 		</div>
 	</li>
 </ul>
--->
+
