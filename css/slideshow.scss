@@ -57,26 +57,26 @@ sitemap:
 
 /* Images and delay */
 .cb-slideshow li:nth-child(1) span {
-    background-image: url("/img/day-bg.png");
+    background-image: url("/img/projectarea.png");
 }
 .cb-slideshow li:nth-child(2) span {
-    background-image: url("/img/projectarea.png");
+    background-image: url("/img/terrGen1.png");
     animation-delay: 6s;
 }
 .cb-slideshow li:nth-child(3) span {
-    background-image: url("/img/ybotStanding.PNG");
+    background-image: url("/img/ybotOnGround.PNG");
     animation-delay: 12s; 
 }
 .cb-slideshow li:nth-child(4) span { 
-    background-image: url("/img/idle.png");
+    background-image: url("/img/ybotStanding.png");
     animation-delay: 18s; 
 }
 .cb-slideshow li:nth-child(5) span { 
-    background-image: url("/img/walk_back.png");
+    background-image: url("/img/running.png");
     animation-delay: 24s; 
 }
 .cb-slideshow li:nth-child(6) span { 
-    background-image: url("/img/running.png");
+    background-image: url("/img/day-bg.png");
     animation-delay: 30s; 
 }
 
