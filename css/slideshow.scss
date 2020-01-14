@@ -57,6 +57,19 @@ sitemap:
     line-height: 200px; 
 }
 
+.cb-slideshow li div a {
+    color: $link-color;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        color: lighten($link-color,20%);
+    }
+    target: _blank;
+}
+
 /* Images and delay */
 .cb-slideshow li:nth-child(1) span {
     background-image: url("/img/projectarea.png");
