@@ -45,10 +45,10 @@ sitemap:
     left: 0px;
     width: 100%;
     text-align: center;
-    /*opacity: 0;*/
+    opacity: 0;
     color: #fff;
     /*animation: titleAnimation 36s linear infinite 0s; */
-    /*animation: titleAnimation 24s linear infinite 0s;*/
+    animation: footerAnimation 24s linear infinite 0s;
 }
 
 /*.cb-slideshow li div h3 { 
@@ -273,7 +273,7 @@ sitemap:
 	100% { opacity: 0 }
 }*/
 
-@keyframes titleAnimation { 
+@keyframes footerAnimation { 
     0% { opacity: 0 }
     8% { opacity: 1 }
     17% { opacity: 1 }
@@ -306,7 +306,7 @@ sitemap:
 }*/
 
 /* Drift Title left */
-/*@keyframes titleAnimation { 
+@keyframes titleAnimation { 
 	0% {
 	    opacity: 0;
 	    transform: translateX(200px);
@@ -325,7 +325,7 @@ sitemap:
 	}
 	25% { opacity: 0 }
 	100% { opacity: 0 }
-}*/
+}
 
 /* Drift Title Down */
 /*@-webkit-keyframes titleAnimation { 
