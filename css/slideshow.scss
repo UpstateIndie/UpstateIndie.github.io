@@ -48,7 +48,7 @@ sitemap:
     opacity: 0;
     color: #fff;
     /*animation: titleAnimation 36s linear infinite 0s; */
-    /*animation: titleAnimation 24s linear infinite 0s;*/
+    animation: titleAnimation 24s linear infinite 0s;
 }
 .cb-slideshow li div h3 { 
     font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
@@ -242,13 +242,13 @@ sitemap:
 	100% { opacity: 0 }
 }*/
 
-/*@keyframes titleAnimation { 
+@keyframes titleAnimation { 
     0% { opacity: 0 }
     8% { opacity: 1 }
     17% { opacity: 1 }
     19% { opacity: 0 }
     100% { opacity: 0 }
-}*/
+}
 
 /* ALT ANIMATIONS */
 
@@ -399,7 +399,7 @@ sitemap:
 }*/
 
 /* Drift Title Up and Expand */
-@-webkit-keyframes titleAnimation { 
+/*@-webkit-keyframes titleAnimation { 
 	0% {
 	    opacity: 0;
 	    -webkit-transform: translateY(200px);
@@ -498,7 +498,7 @@ sitemap:
 	    transform: scale(10);
 	}
 	100% { opacity: 0 }
-}
+}*/
 
 .no-cssanimations .cb-slideshow li span{
 	opacity: 1;
