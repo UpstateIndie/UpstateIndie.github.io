@@ -50,11 +50,25 @@ sitemap:
     /*animation: titleAnimation 36s linear infinite 0s; */
     /*animation: titleAnimation 24s linear infinite 0s;*/
 }
-.cb-slideshow li div h3 { 
+
+/*.cb-slideshow li div h3 { 
     font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
     font-size: 240px;
     padding: 0;
     line-height: 200px; 
+}*/
+
+/* New animated h4 */
+.cb-slideshow li div h4 {
+    z-index:1000;
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    letter-spacing: 1px;
+    word-wrap: break-word;
+    opacity: 0;
+    animation: titleAnimation 24s linear infinite 0s;
 }
 
 .cb-slideshow li div a {
