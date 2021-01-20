@@ -16,10 +16,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: docker build nodejs
-      - run: |
-          docker build ./nodejs aimvector/nodejs:1.0.0
-      - name: docker build python
-        run: |
-          docker build ./python aimvector/python:1.0.0
+    - uses: actions/checkout@v2
+    - name: docker build nodejs
+      run: |
+        docker build ./nodejs aimvector/nodejs:1.0.0
+    - name: docker build python
+      run: |
+        docker build ./python aimvector/python:1.0.0
